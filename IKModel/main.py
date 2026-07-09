@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import ikpy
 
 # Import your channel type(s)
 #from DEFCOM import ChannelTransactional

@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<robot name="cylinder_arm">
+
+  <!-- ========================= -->
+  <!-- BASE LINK -->
+  <!-- ========================= -->
+  <link name="J0">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.05"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- ========================= -->
+  <!-- JOINT 0: YAW -->
+  <!-- ========================= -->
+  <joint name="J0_to_J1" type="revolute">
+    <parent link="J0"/>
+    <child link="J1"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="5"/>
+  </joint>
+
+  <!-- ========================= -->
+  <!-- LINK 1 -->
+  <!-- ========================= -->
+  <link name="J1">
+    <visual>
+      <origin xyz="0.061 0 0" rpy="0 1.5708 0"/>
+      <geometry>
+        <cylinder length="0.122" radius="0.03"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- ========================= -->
+  <!-- JOINT 1: PITCH -->
+  <!-- ========================= -->
+  <joint name="J1_to_J2" type="revolute">
+    <parent link="J1"/>
+    <child link="J2"/>
+    <origin xyz="0.122 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="5"/>
+  </joint>
+
+  <!-- ========================= -->
+  <!-- LINK 2 -->
+  <!-- ========================= -->
+  <link name="J2">
+    <visual>
+      <origin xyz="0.251 0 0" rpy="0 1.5708 0"/>
+      <geometry>
+        <cylinder length="0.502" radius="0.03"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- ========================= -->
+  <!-- JOINT 2: PITCH -->
+  <!-- ========================= -->
+  <joint name="J2_to_J3" type="revolute">
+    <parent link="J2"/>
+    <child link="J3"/>
+    <origin xyz="0.502 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="5"/>
+  </joint>
+
+  <!-- ========================= -->
+  <!-- LINK 3 -->
+  <!-- ========================= -->
+  <link name="J3">
+    <visual>
+      <origin xyz="0.2415 0 0" rpy="0 1.5708 0"/>
+      <geometry>
+        <cylinder length="0.483" radius="0.03"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- ========================= -->
+  <!-- JOINT 3: PITCH -->
+  <!-- ========================= -->
+  <joint name="J3_to_J4" type="revolute">
+    <parent link="J3"/>
+    <child link="J4"/>
+    <origin xyz="0.483 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="5"/>
+  </joint>
+
+  <!-- ========================= -->
+  <!-- LINK 4 -->
+  <!-- ========================= -->
+  <link name="J4">
+    <visual>
+      <origin xyz="0.0295 0 0" rpy="0 1.5708 0"/>
+      <geometry>
+        <cylinder length="0.059" radius="0.025"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- ========================= -->
+  <!-- JOINT 4: YAW -->
+  <!-- ========================= -->
+  <joint name="J4_to_J5" type="revolute">
+    <parent link="J4"/>
+    <child link="J5"/>
+    <origin xyz="0.059 0 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="5"/>
+  </joint>
+
+  <!-- ========================= -->
+  <!-- LINK 5 -->
+  <!-- ========================= -->
+  <link name="J5">
+    <visual>
+      <origin xyz="0.0295 0 0" rpy="0 1.5708 0"/>
+      <geometry>
+        <cylinder length="0.059" radius="0.025"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- ========================= -->
+  <!-- JOINT 5: ROLL -->
+  <!-- ========================= -->
+  <joint name="J5_roll" type="revolute">
+    <parent link="J5"/>
+    <child link="J6"/>
+    <origin xyz="0.059 0 0" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="5"/>
+  </joint>
+
+  <!-- ========================= -->
+  <!-- END EFFECTOR -->
+  <!-- ========================= -->
+  <link name="J6">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.03"/>
+      </geometry>
+    </visual>
+  </link>
+
+</robot>
