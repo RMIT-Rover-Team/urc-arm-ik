@@ -7,7 +7,7 @@ import pybullet_data
 from DEFCOM import ChannelMulticast
 import numpy as np
 from ikpy.utils import geometry
-
+import time
 
 class motionplanner:
     def __init__(self):
@@ -84,6 +84,39 @@ class motionplanner:
         return chain
 
 
+class IKServer:
+    def __init__(self, planner: motionplanner):
+        self.inChannel = ChannelMulticast.MulticastSubscriber("COMFILES/ArmIKControl.defcom")
+        self.outChannel = ChannelMulticast.MulticastPublisher("COMFILES/ArmControl.defcom")
+        self.planner = planner
+
+    def run(self):
+        last = time.time()
+        while True:
+            target = self.inChannel.subscribe()
+
+            # We throttle to 100ms
+            now = time.time()
+            if (now - last) > 0.1:
+                last = now
+
+                #Compute the angles
+                #angles = self.planner.translatePosOrientToAngles(
+                #    target.getFloat('endPosition',0), target.getFloat('endPosition',1), target.getFloat('endPosition',2), 
+                #    target.getFloat('endOrientation',0), target.getFloat('endOrientation',1), target.getFloat('endOrientation',2)
+                #    )
+                angles = self.planner.translatePosToAngles(target.getFloat('endPosition',0), target.getFloat('endPosition',1), target.getFloat('endPosition',2))
+
+                outgoing = self.outChannel.getNewMessageObject()
+
+                for i, a in enumerate(angles):
+                    outgoing.setFloat("jointPositions",a,i)
+                print(angles)
+
+                #Send the message
+                self.outChannel.publish(outgoing)
+
+
 if __name__ == "__main__":
     plan = motionplanner()
 
@@ -91,4 +124,7 @@ if __name__ == "__main__":
     plan.translatePosToAngles(1,2,3)
     plan.translatePosOrientToAngles(4,5,6,0.4, 0.3, 0.1)
 
-    
+    print("Starting Comms")
+    srv = IKServer(plan)
+    srv.run()
+
