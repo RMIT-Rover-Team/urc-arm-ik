@@ -13,7 +13,7 @@ class slider_app:
             #Send a message
             message = self.channel.getNewMessageObject()
             for i in range(3):
-                 message.setFloat("endPosition",pos[i]/100,i)
+                 message.setFloat("endPosition",pos[i]/100.0,i)
                  message.setFloat("endOrientation", math.radians(ori[i]), i)
             self.channel.publish(message)
 
@@ -42,8 +42,8 @@ class slider_app:
 
             slider = tk.Scale(
                 frame,
-                from_=-200,
-                to=200,
+                from_=-100,
+                to=100,
                 orient=tk.HORIZONTAL,
                 length=300,
                 command=self.send_values

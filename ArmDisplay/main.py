@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import pybullet as p
 import pybullet_data
+import threading
 
 # Import your channel type(s)
 from DEFCOM import ChannelMulticast
@@ -14,6 +15,9 @@ ArmJoints = {
     4: 'rev_j4',
     5: 'rev_j5'
 }
+
+
+
 
 def main():
     p.connect(p.GUI)
@@ -37,6 +41,42 @@ def main():
 
     # Create the DEFCOM Connection
     channel = ChannelMulticast.MulticastSubscriber('COMFILES/ArmControl.defcom')
+
+
+
+    #Create a crosshair
+    target = [0,0,0]
+    size = 0.02
+    x_id = p.addUserDebugLine([0,0,0], [0,0,0], [1,0,0], 3)
+    y_id = p.addUserDebugLine([0,0,0], [0,0,0], [1,0,0], 3)
+    z_id = p.addUserDebugLine([0,0,0], [0,0,0], [1,0,0], 3)
+    def targetSubLoop():
+        target = [0,0,0]
+        targetchan = ChannelMulticast.MulticastSubscriber('COMFILES/ArmIKControl.defcom')
+
+        while True:
+            m = targetchan.subscribe()
+            target[0] = m.getFloat('endPosition',0)
+            target[1] = m.getFloat('endPosition',1)
+            target[2] = m.getFloat('endPosition',2)
+
+            # Update crosshair lines
+            p.addUserDebugLine([target[0]-size, target[1], target[2]],
+                               [target[0]+size, target[1], target[2]],
+                               [1,0,0], 3, replaceItemUniqueId=x_id)
+
+            p.addUserDebugLine([target[0], target[1]-size, target[2]],
+                               [target[0], target[1]+size, target[2]],
+                               [1,0,0], 3, replaceItemUniqueId=y_id)
+
+            p.addUserDebugLine([target[0], target[1], target[2]-size],
+                               [target[0], target[1], target[2]+size],
+                               [1,0,0], 3, replaceItemUniqueId=z_id)
+
+    t = threading.Thread(target=targetSubLoop)
+    t.start()
+
+      
 
     #The main loop
     while True:
