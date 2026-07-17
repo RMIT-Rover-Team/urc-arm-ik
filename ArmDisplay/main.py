@@ -24,8 +24,8 @@ def main():
     p.setAdditionalSearchPath(pybullet_data.getDataPath())
 
     # Load the URDF
-    #robot = p.loadURDF("myactuator_arm_assembly/urdf/myactuator_arm_assembly.urdf", useFixedBase=True)
-    robot = p.loadURDF("simplified.urdf", useFixedBase=True)
+    robot = p.loadURDF("myactuator_arm_assembly/urdf/myactuator_arm_assembly.urdf", useFixedBase=True)
+    #robot = p.loadURDF("simplified.urdf", useFixedBase=True)
 
 
     # Dump the Joints loaded and build the lookup

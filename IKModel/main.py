@@ -2,12 +2,13 @@
 import ikpy
 from ikpy.chain import Chain
 from ikpy.link import URDFLink
-import pybullet as p
-import pybullet_data
+#from urdfpy import URDF
 from DEFCOM import ChannelMulticast
 import numpy as np
 from ikpy.utils import geometry
 import time
+import pybullet as p
+import pybullet_data
 
 class motionplanner:
     def __init__(self):
@@ -43,45 +44,36 @@ class motionplanner:
     #IKPY needs a special format so we need to convert from urdf
     def convertURDFtoChain(self):
         p.connect(p.DIRECT)
-        p.setAdditionalSearchPath(pybullet_data.getDataPath())
-
-        # Load the URDF
-        #robot = p.loadURDF("myactuator_arm_assembly/urdf/myactuator_arm_assembly.urdf", useFixedBase=True)
         robot = p.loadURDF("simplified.urdf", useFixedBase=True)
 
-        num_joints = p.getNumJoints(robot)
-
-        joint_info = []
-        for j in range(num_joints):
-            info = p.getJointInfo(robot, j)
-            joint_type = info[2]
-            name = info[1].decode()
-
-            #if joint_type == p.JOINT_FIXED:
-            #    continue
-
-            #Need to convert from global to local coordinates
-            state = p.getLinkState(robot, j, computeForwardKinematics=True)
-
-            pos = state[0]      #position
-            orn = state[1]      #orientation as quaternion
-
-            joint_info.append((name, pos, orn, info[13]))  # axis = info[13]
-        
-        
         links = []
-        for name, pos, orn, axis in joint_info:
+
+        for j in range(p.getNumJoints(robot)):
+            info = p.getJointInfo(robot, j)
+
+            joint_name = info[1].decode()
+            joint_type = info[2]
+
+            # Skip fixed joints
+            if joint_type == p.JOINT_FIXED:
+                continue
+
+            # Local joint origin (correct!)
+            joint_pos = info[14]   # xyz
+            joint_rpy = info[15]   # rpy
+            joint_axis = info[13]  # axis
+
             links.append(
                 URDFLink(
-                    name=name,
-                    origin_translation=pos,
-                    origin_orientation=p.getEulerFromQuaternion(orn),
-                    rotation=axis
+                    name=joint_name,
+                    origin_translation=joint_pos,
+                    origin_orientation=[0,0,0],
+                    rotation=joint_axis
                 )
             )
 
-        chain = Chain(name="robot_chain", links=links)
-        return chain
+        return Chain(name="robot_chain", links=links)
+
 
 
 class IKServer:
@@ -101,11 +93,11 @@ class IKServer:
                 last = now
 
                 #Compute the angles
-                #angles = self.planner.translatePosOrientToAngles(
-                #    target.getFloat('endPosition',0), target.getFloat('endPosition',1), target.getFloat('endPosition',2), 
-                #    target.getFloat('endOrientation',0), target.getFloat('endOrientation',1), target.getFloat('endOrientation',2)
-                #    )
-                angles = self.planner.translatePosToAngles(target.getFloat('endPosition',0), target.getFloat('endPosition',1), target.getFloat('endPosition',2))
+                angles = self.planner.translatePosOrientToAngles(
+                    target.getFloat('endPosition',0), target.getFloat('endPosition',1), target.getFloat('endPosition',2), 
+                    target.getFloat('endOrientation',0), target.getFloat('endOrientation',1), target.getFloat('endOrientation',2)
+                    )
+                #angles = self.planner.translatePosToAngles(target.getFloat('endPosition',0), target.getFloat('endPosition',1), target.getFloat('endPosition',2))
 
                 outgoing = self.outChannel.getNewMessageObject()
 

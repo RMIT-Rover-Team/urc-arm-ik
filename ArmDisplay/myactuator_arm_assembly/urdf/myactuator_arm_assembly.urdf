@@ -3,11 +3,11 @@
     <link name="1mt_054_006">
         <inertial>
             <mass value="0.000786323" />
-            <origin xyz="0.000683678 -0.000177063 0.0277471" rpy="0 0 -0.0337782" />
-            <inertia ixx="1.04073e-06" ixy="-2.62605e-09" ixz="-1.43134e-08" iyy="1.05662e-06" iyz="8.91483e-10" izz="1.37562e-06" />
+            <origin xyz="-0.000689464 0.000152991 0.0277471" rpy="0 -0 -3.14031" />
+            <inertia ixx="1.04094e-06" ixy="-3.17598e-09" ixz="1.43358e-08" iyy="1.05641e-06" iyz="-3.89256e-10" izz="1.37562e-06" />
         </inertial>
         <visual>
-            <origin xyz="0 0 -0.007" rpy="0 0 -0.0337782" />
+            <origin xyz="0 0 -0.007" rpy="0 -0 -3.14031" />
             <geometry>
                 <mesh filename="package://myactuator_arm_assembly/meshes/_1MT_054_006.obj" scale="1 1 1" />
             </geometry>
@@ -19,11 +19,11 @@
     <link name="1mt_054_006_1">
         <inertial>
             <mass value="1.41525e-05" />
-            <origin xyz="1.08123e-17 -9.7001e-18 -0.00306353" rpy="-3.18137e-17 -8.23407e-17 0.737396" />
+            <origin xyz="-1.04525e-17 1.08232e-17 -0.00306353" rpy="-2.15946e-16 7.91128e-17 -2.43925" />
             <inertia ixx="1.77902e-08" ixy="0" ixz="0" iyy="1.77902e-08" iyz="0" izz="3.55114e-08" />
         </inertial>
         <visual>
-            <origin xyz="-2.52712e-34 2.90821e-34 -1.15564e-50" rpy="-3.18137e-17 -8.23407e-17 0.737396" />
+            <origin xyz="2.42364e-34 -2.99499e-34 -8.38498e-50" rpy="-2.15946e-16 7.91128e-17 -2.43925" />
             <geometry>
                 <mesh filename="package://myactuator_arm_assembly/meshes/_1MT_054_006_1.obj" scale="1 1 1" />
             </geometry>
@@ -3240,11 +3240,11 @@
     <link name="part_1_9">
         <inertial>
             <mass value="0.0959519" />
-            <origin xyz="5.02999e-19 1.15601e-19 0.00420457" rpy="0 -0 -2.36939" />
+            <origin xyz="4.42758e-19 -2.6521e-19 0.00420457" rpy="0 -0 -3.13498" />
             <inertia ixx="4.37449e-05" ixy="0" ixz="0" iyy="4.37449e-05" iyz="0" izz="8.5961e-05" />
         </inertial>
         <visual>
-            <origin xyz="-1.81571e-18 1.86429e-18 0" rpy="0 -0 -2.36939" />
+            <origin xyz="-1.72175e-20 2.60232e-18 0" rpy="0 -0 -3.13498" />
             <geometry>
                 <mesh filename="package://myactuator_arm_assembly/meshes/Part_1_6.obj" scale="1 1 1" />
             </geometry>
@@ -3379,7 +3379,6 @@
     <link name="planar_6_1" />
     <link name="planar_7" />
     <link name="planar_7_1" />
-    <link name="rev_j5" />
     <link name="root">
         <visual>
             <origin xyz="-0.0266488 -0.0496513 0.23149" rpy="0 1.5708 -1.35096" />
@@ -4034,11 +4033,11 @@
     <link name="x4_p36_36">
         <inertial>
             <mass value="5.96693e-06" />
-            <origin xyz="-8.78268e-15 -0.00365007 -1.33249e-15" rpy="0 -0 0" />
+            <origin xyz="-8.77981e-15 0.00134993 -1.32982e-15" rpy="0 -0 0" />
             <inertia ixx="4.66191e-10" ixy="0" ixz="-1.02169e-13" iyy="8.68361e-10" iyz="0" izz="4.67676e-10" />
         </inertial>
         <visual>
-            <origin xyz="-3.16376e-17 -0.061 -1.68004e-18" rpy="0 -0 0" />
+            <origin xyz="-2.8762e-17 -0.056 9.89628e-19" rpy="0 -0 0" />
             <geometry>
                 <mesh filename="package://myactuator_arm_assembly/meshes/X4_P36_36.obj" scale="1 1 1" />
             </geometry>
@@ -4050,11 +4049,11 @@
     <link name="x4_p36_36_1">
         <inertial>
             <mass value="3.69067e-05" />
-            <origin xyz="9.36247e-05 -0.0296999 0.0230594" rpy="0 -0 0" />
+            <origin xyz="0.0208782 -0.0296999 0.0110594" rpy="0 -0 0" />
             <inertia ixx="2.16595e-08" ixy="4.75101e-11" ixz="-3.28571e-11" iyy="1.92706e-08" iyz="-7.20768e-10" izz="2.15007e-08" />
         </inertial>
         <visual>
-            <origin xyz="-5.79241e-17 -0.058 0.024" rpy="0 -0 0" />
+            <origin xyz="0.0207846 -0.058 0.012" rpy="0 -0 0" />
             <geometry>
                 <mesh filename="package://myactuator_arm_assembly/meshes/X4_P36_36_1.obj" scale="1 1 1" />
             </geometry>
@@ -4095,13 +4094,6 @@
             </material>
         </visual>
     </link>
-    <link name="x4_p36_36__2__loop_closure">
-        <inertial>
-            <mass value="1e-09" />
-            <origin xyz="0 0 0" rpy="0 -0 0" />
-            <inertia ixx="4e-14" ixy="0" ixz="0" iyy="4e-14" iyz="0" izz="4e-14" />
-        </inertial>
-    </link>
     <link name="x6_p20_60">
         <inertial>
             <mass value="6.1996e-05" />
@@ -4121,11 +4113,11 @@
     <link name="x6_p20_60_1">
         <inertial>
             <mass value="1.19563e-05" />
-            <origin xyz="-2.14314e-17 1.28205e-17 0.00131301" rpy="-3.01993e-20 4.82514e-20 -2.52734" />
-            <inertia ixx="3.22835e-09" ixy="-3.2479e-13" ixz="0" iyy="3.22738e-09" iyz="0" izz="4.51683e-09" />
+            <origin xyz="1.82538e-17 -1.70432e-17 0.00131301" rpy="-9.38588e-21 -7.36343e-21 0.402243" />
+            <inertia ixx="3.22817e-09" ixy="-4.96105e-13" ixz="0" iyy="3.22755e-09" iyz="0" izz="4.51683e-09" />
         </inertial>
         <visual>
-            <origin xyz="-4.15558e-16 -9.59592e-16 0.0627" rpy="-3.01993e-20 4.82514e-20 -2.52734" />
+            <origin xyz="6.08172e-16 8.50661e-16 0.0627" rpy="-9.38588e-21 -7.36343e-21 0.402243" />
             <geometry>
                 <mesh filename="package://myactuator_arm_assembly/meshes/X6_P20_60_1.obj" scale="1 1 1" />
             </geometry>
@@ -4135,7 +4127,7 @@
         </visual>
     </link>
     <joint name="cylindrical_1" type="prismatic">
-        <origin xyz="-0.016 0.00542506 -0.0062" rpy="0 1.5708 -4.71239" />
+        <origin xyz="-0.016 0.00542506 -0.0062" rpy="0 1.5708 1.5708" />
         <axis xyz="0 0 -1" />
         <parent link="mgn12h_body" />
         <child link="cylindrical_1" />
@@ -4149,7 +4141,7 @@
         <limit effort="1" velocity="1" lower="0" upper="0" />
     </joint>
     <joint name="cylindrical_2" type="prismatic">
-        <origin xyz="-0.016 0.00542506 -0.01" rpy="0 1.5708 -4.71239" />
+        <origin xyz="-0.016 0.00542506 -0.01" rpy="0 1.5708 1.5708" />
         <axis xyz="0 0 -1" />
         <parent link="mgn12h_body_1" />
         <child link="cylindrical_2" />
@@ -4163,7 +4155,7 @@
         <limit effort="1" velocity="1" lower="0" upper="0" />
     </joint>
     <joint name="cylindrical_3" type="prismatic">
-        <origin xyz="-0.1 1.11022e-16 0.054625" rpy="0 -1.5708 -9.71445e-17" />
+        <origin xyz="-0.1 1.11022e-16 0.054625" rpy="0 -1.5708 1.73472e-18" />
         <axis xyz="-0 -0 -1" />
         <parent link="part_1_14" />
         <child link="cylindrical_3" />
@@ -4177,22 +4169,16 @@
         <limit effort="1" velocity="1" lower="0" upper="0" />
     </joint>
     <joint name="fastened_1" type="fixed">
-        <origin xyz="-0.035 -2.77556e-17 -0.035" rpy="8.03431e-16 9.01639e-16 -4.996e-16" />
+        <origin xyz="-0.035 2.77556e-17 -0.035" rpy="1.26416e-15 -2.95058e-16 7.25982e-16" />
         <axis xyz="0 0 1" />
         <parent link="part_2" />
         <child link="part_1_6" />
     </joint>
     <joint name="fastened_10" type="fixed">
-        <origin xyz="1.0842e-19 0 -0.006" rpy="-1.5708 -6.4948e-15 -1.5708" />
+        <origin xyz="4.33681e-19 2.77556e-17 -0.006" rpy="-1.5708 -6.21725e-15 -1.5708" />
         <axis xyz="-0 -1 -0" />
         <parent link="part_1_1" />
         <child link="part_1_2" />
-    </joint>
-    <joint name="fastened_11" type="fixed">
-        <origin xyz="-1.11022e-16 2.77556e-17 -6.93889e-17" rpy="0 -1.5708 4.71239" />
-        <axis xyz="0 0 -1" />
-        <parent link="x4_p36_36" />
-        <child link="part_1_14" />
     </joint>
     <joint name="fastened_12" type="fixed">
         <origin xyz="1.08802e-17 -0.087 0" rpy="-3.14159 -9.01252e-18 1.5708" />
@@ -4213,7 +4199,7 @@
         <child link="socket_button_head_screw_m4x0_7_x_25_20" />
     </joint>
     <joint name="fastened_14_1" type="fixed">
-        <origin xyz="-0.005 -2.77556e-17 -0.02" rpy="0 -1.5708 -1.78702e-15" />
+        <origin xyz="-0.005 -4.4964e-15 -0.02" rpy="0 -1.5708 -9.73561e-16" />
         <axis xyz="0 0 -1" />
         <parent link="part_2" />
         <child link="socket_button_head_screw_m4x0_7_x_25_22" />
@@ -4225,13 +4211,13 @@
         <child link="socket_button_head_screw_m4x0_7_x_25_24" />
     </joint>
     <joint name="fastened_14_3" type="fixed">
-        <origin xyz="-0.005 0.02 2.77556e-17" rpy="1.5708 -3.60822e-15 -1.5708" />
+        <origin xyz="-0.005 0.02 -9.20097e-15" rpy="1.5708 2.498e-15 -1.5708" />
         <axis xyz="0 0 -1" />
         <parent link="part_2" />
         <child link="socket_button_head_screw_m4x0_7_x_25_18" />
     </joint>
     <joint name="fastened_14_4" type="fixed">
-        <origin xyz="-0.005 2.22045e-16 0.02" rpy="0 1.5708 -3.14159" />
+        <origin xyz="-0.005 4.7462e-15 0.02" rpy="0 1.5708 3.14159" />
         <axis xyz="0 0 -1" />
         <parent link="part_2" />
         <child link="socket_button_head_screw_m4x0_7_x_25_5" />
@@ -4249,103 +4235,103 @@
         <child link="socket_button_head_screw_m4x0_7_x_25_9" />
     </joint>
     <joint name="fastened_14_7" type="fixed">
-        <origin xyz="-0.005 -0.02 2.77556e-17" rpy="-1.5708 -8.32667e-16 1.5708" />
+        <origin xyz="-0.005 -0.02 1.38778e-17" rpy="-1.5708 -1.77636e-15 1.5708" />
         <axis xyz="0 0 -1" />
         <parent link="part_2" />
         <child link="socket_button_head_screw_m4x0_7_x_25_32" />
     </joint>
     <joint name="fastened_15" type="fixed">
-        <origin xyz="-0.0125 -2.22045e-16 -0.03" rpy="-1.24759e-15 -6.94753e-15 3.14159" />
+        <origin xyz="-0.0125 5.55112e-17 -0.03" rpy="-4.00514e-15 -6.33169e-15 3.14159" />
         <axis xyz="0 0 -1" />
         <parent link="part_2" />
         <child link="socket_button_head_screw_m4x0_7_x_25_8" />
     </joint>
     <joint name="fastened_15_1" type="fixed">
-        <origin xyz="-0.035 -0.0225 -0.03" rpy="1.98071e-15 -6.08171e-15 1.5708" />
+        <origin xyz="-0.035 -0.0225 -0.03" rpy="-2.29244e-15 -2.86657e-15 1.5708" />
         <axis xyz="0 0 -1" />
         <parent link="part_2" />
         <child link="socket_button_head_screw_m4x0_7_x_25_26" />
     </joint>
     <joint name="fastened_15_2" type="fixed">
-        <origin xyz="-0.035 0.0225 -0.03" rpy="-5.02613e-15 -4.33392e-15 -1.5708" />
+        <origin xyz="-0.035 0.0225 -0.03" rpy="-7.36556e-15 -5.15429e-15 -1.5708" />
         <axis xyz="0 0 -1" />
         <parent link="part_2" />
         <child link="socket_button_head_screw_m4x0_7_x_25_4" />
     </joint>
     <joint name="fastened_15_3" type="fixed">
-        <origin xyz="-0.0509099 0.0159099 -0.03" rpy="-1.50983e-15 -1.31527e-15 -0.785398" />
+        <origin xyz="-0.0509099 0.0159099 -0.03" rpy="-2.46996e-15 -9.05189e-16 -0.785398" />
         <axis xyz="0 0 -1" />
         <parent link="part_2" />
         <child link="socket_button_head_screw_m4x0_7_x_25_2" />
     </joint>
     <joint name="fastened_15_4" type="fixed">
-        <origin xyz="-0.0190901 -0.0159099 -0.03" rpy="-6.78457e-16 -5.20949e-15 2.35619" />
+        <origin xyz="-0.0190901 -0.0159099 -0.03" rpy="-1.46559e-15 -5.40117e-15 2.35619" />
         <axis xyz="0 0 -1" />
         <parent link="part_2" />
         <child link="socket_button_head_screw_m4x0_7_x_25" />
     </joint>
     <joint name="fastened_15_5" type="fixed">
-        <origin xyz="-0.0190901 0.0159099 -0.03" rpy="-8.09437e-16 -3.78674e-15 -2.35619" />
+        <origin xyz="-0.0190901 0.0159099 -0.03" rpy="-3.07064e-15 -3.04372e-15 -2.35619" />
         <axis xyz="0 0 -1" />
         <parent link="part_2" />
         <child link="socket_button_head_screw_m4x0_7_x_25_23" />
     </joint>
     <joint name="fastened_15_6" type="fixed">
-        <origin xyz="-0.0509099 -0.0159099 -0.03" rpy="2.97978e-15 -4.09885e-15 0.785398" />
+        <origin xyz="-0.0509099 -0.0159099 -0.03" rpy="1.99865e-15 -4.80559e-15 0.785398" />
         <axis xyz="0 0 -1" />
         <parent link="part_2" />
         <child link="socket_button_head_screw_m4x0_7_x_25_6" />
     </joint>
     <joint name="fastened_15_7" type="fixed">
-        <origin xyz="-0.0575 0 -0.03" rpy="8.13741e-16 -2.58193e-15 -5.19029e-15" />
+        <origin xyz="-0.0575 0 -0.03" rpy="-2.11915e-16 -2.80533e-15 -3.29294e-15" />
         <axis xyz="0 0 -1" />
         <parent link="part_2" />
         <child link="socket_button_head_screw_m4x0_7_x_25_30" />
     </joint>
     <joint name="fastened_16" type="fixed">
-        <origin xyz="5.96745e-16 0.0225 0.005" rpy="-2.69203e-15 7.12068e-15 -2.35619" />
+        <origin xyz="-8.32667e-17 0.0225 0.005" rpy="1.98574e-15 -2.07287e-15 -2.35619" />
         <axis xyz="0 0 -1" />
         <parent link="part_2_1" />
         <child link="socket_button_head_screw_m4x0_7_x_25_3" />
     </joint>
     <joint name="fastened_16_1" type="fixed">
-        <origin xyz="-0.0225 1.66533e-16 0.005" rpy="-2.66629e-15 -9.23028e-15 -0.785398" />
+        <origin xyz="-0.0225 -2.77556e-17 0.005" rpy="4.47501e-16 -3.10637e-16 -0.785398" />
         <axis xyz="0 0 -1" />
         <parent link="part_2_1" />
         <child link="socket_button_head_screw_m4x0_7_x_25_25" />
     </joint>
     <joint name="fastened_16_2" type="fixed">
-        <origin xyz="0.0225 0 0.005" rpy="-2.08003e-14 9.62722e-15 2.35619" />
+        <origin xyz="0.0225 -5.55112e-17 0.005" rpy="9.04458e-16 6.2749e-16 2.35619" />
         <axis xyz="0 0 -1" />
         <parent link="part_2_1" />
         <child link="socket_button_head_screw_m4x0_7_x_25_17" />
     </joint>
     <joint name="fastened_16_3" type="fixed">
-        <origin xyz="-4.996e-16 -0.0225 0.005" rpy="-2.07651e-14 -1.10436e-14 0.785398" />
+        <origin xyz="-1.94289e-16 -0.0225 0.005" rpy="-6.99562e-16 -1.71219e-15 0.785398" />
         <axis xyz="0 0 -1" />
         <parent link="part_2_1" />
         <child link="socket_button_head_screw_m4x0_7_x_25_31" />
     </joint>
     <joint name="fastened_16_4" type="fixed">
-        <origin xyz="0.0159099 -0.0159099 0.005" rpy="-2.37889e-14 -3.58594e-15 1.5708" />
+        <origin xyz="0.0159099 -0.0159099 0.005" rpy="-1.1565e-15 -3.29432e-15 1.5708" />
         <axis xyz="0 0 -1" />
         <parent link="part_2_1" />
         <child link="socket_button_head_screw_m4x0_7_x_25_11" />
     </joint>
     <joint name="fastened_16_5" type="fixed">
-        <origin xyz="0.0159099 0.0159099 0.005" rpy="-9.99553e-15 1.2619e-14 -3.14159" />
+        <origin xyz="0.0159099 0.0159099 0.005" rpy="8.26628e-16 1.08624e-16 -3.14159" />
         <axis xyz="0 0 -1" />
         <parent link="part_2_1" />
         <child link="socket_button_head_screw_m4x0_7_x_25_12" />
     </joint>
     <joint name="fastened_16_6" type="fixed">
-        <origin xyz="-0.0159099 -0.0159099 0.005" rpy="-1.21915e-14 -1.42279e-14 6.66134e-15" />
+        <origin xyz="-0.0159099 -0.0159099 0.005" rpy="-9.07349e-16 -1.57393e-15 6.9519e-16" />
         <axis xyz="0 0 -1" />
         <parent link="part_2_1" />
         <child link="socket_button_head_screw_m4x0_7_x_25_28" />
     </joint>
     <joint name="fastened_16_7" type="fixed">
-        <origin xyz="-0.0159099 0.0159099 0.005" rpy="9.14626e-16 9.19021e-16 -1.5708" />
+        <origin xyz="-0.0159099 0.0159099 0.005" rpy="1.89829e-15 1.89916e-15 -1.5708" />
         <axis xyz="0 0 -1" />
         <parent link="part_2_1" />
         <child link="socket_button_head_screw_m4x0_7_x_25_19" />
@@ -4357,7 +4343,7 @@
         <child link="socket_button_head_screw_m4x0_7_x_25_14" />
     </joint>
     <joint name="fastened_17_1" type="fixed">
-        <origin xyz="0.03 -0.02 0.035" rpy="1.5708 -5.55112e-17 -1.5708" />
+        <origin xyz="0.03 -0.02 0.035" rpy="1.5708 -1.33227e-15 -1.5708" />
         <axis xyz="0 0 -1" />
         <parent link="part_2_1" />
         <child link="socket_button_head_screw_m4x0_7_x_25_16" />
@@ -4381,25 +4367,25 @@
         <child link="socket_button_head_screw_m4x0_7_x_25_15" />
     </joint>
     <joint name="fastened_17_5" type="fixed">
-        <origin xyz="0.03 -2.22045e-16 0.015" rpy="0 1.5708 -3.14159" />
+        <origin xyz="0.03 2.77556e-17 0.015" rpy="0 1.5708 3.14159" />
         <axis xyz="0 0 -1" />
         <parent link="part_2_1" />
         <child link="socket_button_head_screw_m4x0_7_x_25_1" />
     </joint>
     <joint name="fastened_17_6" type="fixed">
-        <origin xyz="0.03 2.77556e-17 0.055" rpy="0 -1.5708 1.5707e-14" />
+        <origin xyz="0.03 5.55112e-17 0.055" rpy="0 -1.5708 4.93892e-15" />
         <axis xyz="0 0 -1" />
         <parent link="part_2_1" />
         <child link="socket_button_head_screw_m4x0_7_x_25_10" />
     </joint>
     <joint name="fastened_17_7" type="fixed">
-        <origin xyz="0.03 0.02 0.035" rpy="-1.5708 -3.05311e-15 1.5708" />
+        <origin xyz="0.03 0.02 0.035" rpy="-1.5708 6.10623e-16 1.5708" />
         <axis xyz="0 0 -1" />
         <parent link="part_2_1" />
         <child link="socket_button_head_screw_m4x0_7_x_25_21" />
     </joint>
     <joint name="fastened_1_1" type="fixed">
-        <origin xyz="-1.38778e-17 -2.77556e-17 0.011" rpy="2.97687e-16 -2.66523e-16 -2.36939" />
+        <origin xyz="0 0 0.011" rpy="2.47148e-16 -2.31553e-16 -3.13498" />
         <axis xyz="0 0 -1" />
         <parent link="part_1_9" />
         <child link="part_2_1" />
@@ -4411,7 +4397,7 @@
         <child link="2020_134_mm_3" />
     </joint>
     <joint name="fastened_1_3" type="fixed">
-        <origin xyz="-6.47109e-18 0 -0.0155" rpy="1.21338e-16 -1.19518e-17 -0.0337782" />
+        <origin xyz="4.678e-19 -1.38778e-17 -0.0155" rpy="1.22507e-16 4.52415e-19 -3.14031" />
         <axis xyz="0 0 1" />
         <parent link="1mt_054_006" />
         <child link="part_1_10" />
@@ -4435,13 +4421,13 @@
         <child link="2020_134_mm_1" />
     </joint>
     <joint name="fastened_2" type="fixed">
-        <origin xyz="1.38778e-17 8.32667e-17 0.006" rpy="0 1.5708 -3.14159" />
+        <origin xyz="0 0 0.006" rpy="0 1.5708 3.14159" />
         <axis xyz="1 2.13504e-16 -0" />
         <parent link="part_1_5" />
         <child link="part_2" />
     </joint>
     <joint name="fastened_2_1" type="fixed">
-        <origin xyz="0.03 -0.0325 0.005" rpy="9.09303e-16 6.20454e-15 -4.88498e-15" />
+        <origin xyz="0.03 -0.0325 0.005" rpy="2.39304e-15 5.7476e-15 4.78784e-15" />
         <axis xyz="0 -1 0" />
         <parent link="part_2_1" />
         <child link="part_4_1" />
@@ -4453,7 +4439,7 @@
         <child link="2020_134_mm" />
     </joint>
     <joint name="fastened_2_3" type="fixed">
-        <origin xyz="2.60209e-18 0 0.006" rpy="3.14159 1.55672e-15 1.31929e-16" />
+        <origin xyz="8.67362e-18 2.77556e-17 0.006" rpy="-3.14159 4.9327e-16 4.02605e-16" />
         <axis xyz="0 0 1" />
         <parent link="part_1_7" />
         <child link="part_1_4" />
@@ -4465,19 +4451,19 @@
         <child link="2020_134_mm_2" />
     </joint>
     <joint name="fastened_3" type="fixed">
-        <origin xyz="-0.005 -0.0325 -0.03" rpy="-9.59007e-16 -7.29361e-15 3.46945e-15" />
+        <origin xyz="-0.005 -0.0325 -0.03" rpy="-1.12722e-15 -7.12056e-15 -5.33948e-15" />
         <axis xyz="-0 1 -0" />
         <parent link="part_2" />
         <child link="part_3" />
     </joint>
     <joint name="fastened_3_1" type="fixed">
-        <origin xyz="0.03 0.0325 0.005" rpy="4.53896e-16 5.61758e-15 -2.85882e-15" />
+        <origin xyz="0.03 0.0325 0.005" rpy="1.08615e-15 6.19969e-15 4.09048e-15" />
         <axis xyz="0 1 0" />
         <parent link="part_2_1" />
         <child link="part_3_1" />
     </joint>
     <joint name="fastened_3_2" type="fixed">
-        <origin xyz="2.77556e-17 -5.55112e-17 -0.006" rpy="-1.5708 -4.61267e-17 3.14159" />
+        <origin xyz="0 8.32667e-17 -0.006" rpy="-1.5708 -5.04282e-15 -3.14159" />
         <axis xyz="-0 -1 -0" />
         <parent link="part_1_8" />
         <child link="part_1_11" />
@@ -4489,13 +4475,13 @@
         <child link="2020_340_mm__1__loop_closure" />
     </joint>
     <joint name="fastened_4" type="fixed">
-        <origin xyz="-0.005 0.0325 -0.03" rpy="-1.04639e-15 -5.72573e-15 3.69149e-15" />
+        <origin xyz="-0.005 0.0325 -0.03" rpy="-2.17614e-15 -5.62764e-15 -3.38575e-15" />
         <axis xyz="0 1 0" />
         <parent link="part_2" />
         <child link="part_4" />
     </joint>
     <joint name="fastened_4_1" type="fixed">
-        <origin xyz="0.035 0 0.035" rpy="0 1.5708 -3.14159" />
+        <origin xyz="0.035 2.77556e-17 0.035" rpy="0 1.5708 3.14159" />
         <axis xyz="0 0 1" />
         <parent link="part_2_1" />
         <child link="part_1_8" />
@@ -4507,7 +4493,7 @@
         <child link="2020_80_mm_3" />
     </joint>
     <joint name="fastened_4_3" type="fixed">
-        <origin xyz="0.052195 1.11022e-16 0.07949" rpy="3.14159 4.05645e-16 -2.11455e-16" />
+        <origin xyz="0.052195 0 0.07949" rpy="3.14159 7.65029e-16 -1.58604e-16" />
         <axis xyz="-0 -0 1" />
         <parent link="part_1_12" />
         <child link="part_1_1" />
@@ -4525,7 +4511,7 @@
         <child link="1mt_055_026_rh_25_100_e_b_一体化谐波减速模组_双编_抱闸_ecat_" />
     </joint>
     <joint name="fastened_6" type="fixed">
-        <origin xyz="0 0.42 -2.77556e-17" rpy="1.5708 5.29737e-16 3.14159" />
+        <origin xyz="-2.77556e-17 0.42 5.55112e-17" rpy="1.5708 6.75171e-16 3.14159" />
         <axis xyz="0 0 -1" />
         <parent link="part_1_11" />
         <child link="part_1_5" />
@@ -4543,13 +4529,19 @@
         <child link="2020_80_mm" />
     </joint>
     <joint name="fastened_7_1" type="fixed">
-        <origin xyz="0.014 2.22045e-16 5.55112e-17" rpy="-1.309 2.56482e-16 -8.59858e-16" />
+        <origin xyz="0.014 2.22045e-16 1.11022e-16" rpy="-1.309 2.32567e-16 -8.59677e-16" />
         <axis xyz="1 -0 1.81309e-16" />
         <parent link="1mt_055_025_rh_20_100_e_b_一体化谐波减速模组_双编_抱闸_ecat_" />
         <child link="part_1_12" />
     </joint>
+    <joint name="fastened_8" type="fixed">
+        <origin xyz="-0.00810875 0.073 0.0182825" rpy="1.93753 -0.204134 -1.08518" />
+        <axis xyz="2.26473e-17 1 -8.14831e-17" />
+        <parent link="part_1__print_" />
+        <child link="x4_p36_36_1" />
+    </joint>
     <joint name="fastened_9" type="fixed">
-        <origin xyz="-1.11022e-16 0.36 -3.03577e-18" rpy="0 -1.5708 -1.5708" />
+        <origin xyz="-2.77556e-17 0.36 -1.30104e-18" rpy="0 -1.5708 -1.5708" />
         <axis xyz="0 0 -1" />
         <parent link="part_1_2" />
         <child link="part_1_7" />
@@ -4561,109 +4553,109 @@
         <child link="part_1_3" />
     </joint>
     <joint name="group_1__1__fastened_joint" type="fixed">
-        <origin xyz="-2.10942e-15 7.77156e-16 0.025" rpy="1.21431e-17 4.16334e-17 2.52778e-34" />
+        <origin xyz="-5.55112e-16 2.66454e-15 0.025" rpy="1.0842e-19 -8.67362e-19 3.46945e-18" />
         <axis xyz="0 0 1" />
         <parent link="mgn12r_covercap_1" />
         <child link="mgn12r_covercap" />
     </joint>
     <joint name="group_1__1__fastened_joint_1" type="fixed">
-        <origin xyz="1.11022e-16 -5.27356e-16 0.025" rpy="1.21431e-17 4.16334e-17 2.52778e-34" />
+        <origin xyz="1.77636e-15 -1.77636e-15 0.025" rpy="1.0842e-19 -8.67362e-19 3.46945e-18" />
         <axis xyz="0 0 1" />
         <parent link="mgn12r_covercap_6" />
         <child link="mgn12r_covercap_2" />
     </joint>
     <joint name="group_1__1__fastened_joint_2" type="fixed">
-        <origin xyz="-4.10783e-15 0.00286541 -0.0375" rpy="1.21431e-17 4.16334e-17 2.52778e-34" />
+        <origin xyz="-4.44089e-15 0.00286541 -0.0375" rpy="1.0842e-19 -8.67362e-19 3.46945e-18" />
         <axis xyz="0 0 1" />
         <parent link="mgnr12r100hm_1" />
         <child link="mgn12r_covercap_6" />
     </joint>
     <joint name="group_1__1__fastened_joint_3" type="fixed">
-        <origin xyz="0.0414408 8.60423e-16 -0.0279761" rpy="-6.90464e-15 -0.718745 -3.40409e-15" />
+        <origin xyz="0.0414408 -8.88178e-16 -0.0279761" rpy="-7.62784e-15 -0.718745 -2.72263e-15" />
         <axis xyz="0 0 1" />
         <parent link="screw_din_912_m3x8f_a2_5" />
         <child link="screw_din_912_m3x8f_a2_7" />
     </joint>
     <joint name="group_1__1__fastened_joint_4" type="fixed">
-        <origin xyz="-1.33227e-15 -0.0113 0.025" rpy="-3.87344e-14 0.304087 -1.19077e-14" />
+        <origin xyz="-1.55431e-15 -0.0113 0.025" rpy="-3.99519e-14 0.304087 -1.18173e-14" />
         <axis xyz="0 0 1" />
         <parent link="mgn12r_covercap" />
         <child link="screw_din_912_m3x8f_a2_1" />
     </joint>
     <joint name="group_1__1__fastened_joint_5" type="fixed">
-        <origin xyz="4.32987e-15 -1.22125e-15 -0.075" rpy="1.21431e-17 4.16334e-17 2.52778e-34" />
+        <origin xyz="2.498e-15 1.55431e-15 -0.075" rpy="1.0842e-19 -8.67362e-19 3.46945e-18" />
         <axis xyz="0 0 1" />
         <parent link="mgn12r_covercap_2" />
         <child link="mgn12r_covercap_1" />
     </joint>
     <joint name="group_1__1__fastened_joint_6" type="fixed">
-        <origin xyz="0.00638452 1.13798e-15 -0.024171" rpy="3.77223e-14 -0.258241 -1.21155e-16" />
+        <origin xyz="0.00638452 2.44249e-15 -0.024171" rpy="3.8582e-14 -0.258241 -5.11479e-16" />
         <axis xyz="0 0 1" />
         <parent link="screw_din_912_m3x8f_a2_7" />
         <child link="screw_din_912_m3x8f_a2_6" />
     </joint>
     <joint name="group_1__1__fastened_joint_7" type="fixed">
-        <origin xyz="-0.00748555 -2.69229e-15 0.023853" rpy="1.06107e-14 0.6729 9.71925e-15" />
+        <origin xyz="-0.00748555 -2.88658e-15 0.023853" rpy="1.20516e-14 0.6729 1.02933e-14" />
         <axis xyz="0 0 1" />
         <parent link="screw_din_912_m3x8f_a2_1" />
         <child link="screw_din_912_m3x8f_a2_5" />
     </joint>
     <joint name="group_1_fastened_joint" type="fixed">
-        <origin xyz="1.37668e-14 2.05391e-15 -0.075" rpy="1.73472e-18 1.38778e-17 1.20371e-35" />
+        <origin xyz="1.5099e-14 1.55431e-15 -0.075" rpy="1.0842e-19 1.88079e-37 -3.46945e-18" />
         <axis xyz="0 0 1" />
         <parent link="mgn12r_covercap_5" />
         <child link="mgn12r_covercap_3" />
     </joint>
     <joint name="group_1_fastened_joint_1" type="fixed">
-        <origin xyz="-5.55112e-15 -7.21645e-16 0.025" rpy="1.73472e-18 1.38778e-17 1.20371e-35" />
+        <origin xyz="-3.83027e-15 -2.44249e-15 0.025" rpy="1.0842e-19 1.88079e-37 -3.46945e-18" />
         <axis xyz="0 0 1" />
         <parent link="mgn12r_covercap_3" />
         <child link="mgn12r_covercap_4" />
     </joint>
     <joint name="group_1_fastened_joint_2" type="fixed">
-        <origin xyz="-1.07692e-14 0.00286541 0.0625" rpy="1.73472e-18 1.38778e-17 1.20371e-35" />
+        <origin xyz="-1.14908e-14 0.00286541 0.0625" rpy="1.0842e-19 1.88079e-37 -3.46945e-18" />
         <axis xyz="0 0 1" />
         <parent link="mgnr12r100hm" />
         <child link="mgn12r_covercap_7" />
     </joint>
     <joint name="group_1_fastened_joint_3" type="fixed">
-        <origin xyz="0.0414408 -1.47105e-15 -0.0279761" rpy="-5.46484e-14 -0.718745 -5.99185e-16" />
+        <origin xyz="0.0414408 -1.11022e-15 -0.0279761" rpy="-5.52193e-14 -0.718745 1.3789e-16" />
         <axis xyz="0 0 1" />
         <parent link="screw_din_912_m3x8f_a2_4" />
         <child link="screw_din_912_m3x8f_a2" />
     </joint>
     <joint name="group_1_fastened_joint_4" type="fixed">
-        <origin xyz="0.00638452 2.77556e-16 -0.024171" rpy="1.28654e-14 -0.258241 8.17247e-15" />
+        <origin xyz="0.00638452 2.22045e-15 -0.024171" rpy="1.45481e-14 -0.258241 7.83403e-15" />
         <axis xyz="0 0 1" />
         <parent link="screw_din_912_m3x8f_a2" />
         <child link="screw_din_912_m3x8f_a2_2" />
     </joint>
     <joint name="group_1_fastened_joint_5" type="fixed">
-        <origin xyz="-4.21885e-15 -1.80411e-15 0.025" rpy="1.73472e-18 1.38778e-17 1.20371e-35" />
+        <origin xyz="-4.94049e-15 2.66454e-15 0.025" rpy="1.0842e-19 1.88079e-37 -3.46945e-18" />
         <axis xyz="0 0 1" />
         <parent link="mgn12r_covercap_7" />
         <child link="mgn12r_covercap_5" />
     </joint>
     <joint name="group_1_fastened_joint_6" type="fixed">
-        <origin xyz="-5.88418e-15 -0.0113 0.025" rpy="-1.1509e-14 0.304087 -1.24943e-14" />
+        <origin xyz="-7.21645e-15 -0.0113 0.025" rpy="-1.19367e-14 0.304087 -1.32594e-14" />
         <axis xyz="0 0 1" />
         <parent link="mgn12r_covercap_4" />
         <child link="screw_din_912_m3x8f_a2_3" />
     </joint>
     <joint name="group_1_fastened_joint_7" type="fixed">
-        <origin xyz="-0.00748555 -4.71845e-16 0.023853" rpy="6.54302e-14 0.6729 4.3537e-14" />
+        <origin xyz="-0.00748555 3.33067e-15 0.023853" rpy="6.48711e-14 0.6729 4.32324e-14" />
         <axis xyz="0 0 1" />
         <parent link="screw_din_912_m3x8f_a2_3" />
         <child link="screw_din_912_m3x8f_a2_4" />
     </joint>
     <joint name="group_2__1__fastened_joint" type="fixed">
-        <origin xyz="1.54321e-14 -7.74381e-15 0.0374" rpy="1.73472e-17 1.38778e-17 6.93889e-18" />
+        <origin xyz="1.62093e-14 -7.99361e-15 0.0374" rpy="-1.6263e-19 8.46356e-37 1.04083e-17" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_endcap" />
         <child link="mgn12h_endcap_3" />
     </joint>
     <joint name="group_2__1__fastened_joint_1" type="fixed">
-        <origin xyz="0.000923121 0.00547063 0.00449441" rpy="0 -0 0" />
+        <origin xyz="0.000923121 0.00547063 0.00449441" rpy="5.55112e-17 -2.77556e-17 -1.38778e-17" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_11" />
         <child link="mgn12h_ball_61" />
@@ -4675,7 +4667,7 @@
         <child link="mgn12h_ball_59" />
     </joint>
     <joint name="group_2__1__fastened_joint_11" type="fixed">
-        <origin xyz="-1.66533e-14 0.0003 -0.0439" rpy="-5.49907e-16 -4.85723e-16 -4.51028e-16" />
+        <origin xyz="-1.63203e-14 0.0003 -0.0439" rpy="-5.65737e-16 -4.15466e-16 -3.33067e-16" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_seal_3" />
         <child link="mgn12h_endcap" />
@@ -4687,25 +4679,25 @@
         <child link="mgn12h_ball_5" />
     </joint>
     <joint name="group_2__1__fastened_joint_13" type="fixed">
-        <origin xyz="-0.00262466 0.00336298 -0.0111091" rpy="-1.38778e-17 -1.38778e-17 2.77556e-17" />
+        <origin xyz="-0.00262466 0.00336298 -0.0111091" rpy="1.38778e-17 2.77556e-17 -5.55112e-17" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_4" />
         <child link="mgn12h_ball_64" />
     </joint>
     <joint name="group_2__1__fastened_joint_14" type="fixed">
-        <origin xyz="0.00104986 -0.00134519 0.00444363" rpy="-1.38778e-17 -1.38778e-17 2.77556e-17" />
+        <origin xyz="0.00104986 -0.00134519 0.00444363" rpy="1.38778e-17 2.77556e-17 -5.55112e-17" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_55" />
         <child link="mgn12h_ball_7" />
     </joint>
     <joint name="group_2__1__fastened_joint_15" type="fixed">
-        <origin xyz="0.00153853 0.00911771 0.00749068" rpy="0 -0 0" />
+        <origin xyz="0.00153853 0.00911771 0.00749068" rpy="5.55112e-17 -2.77556e-17 -1.38778e-17" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_1" />
         <child link="mgn12h_ball_41" />
     </joint>
     <joint name="group_2__1__fastened_joint_16" type="fixed">
-        <origin xyz="-0.00175 0.0077 0.00224" rpy="1.5708 -1.82632e-14 -1.5708" />
+        <origin xyz="-0.00175 0.0077 0.00224" rpy="1.5708 -1.84297e-14 -1.5708" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_cage_3" />
         <child link="mgn12h_seal_3" />
@@ -4723,13 +4715,13 @@
         <child link="mgn12h_ball_4" />
     </joint>
     <joint name="group_2__1__fastened_joint_19" type="fixed">
-        <origin xyz="0.00307707 0.0182354 0.0149814" rpy="0 -0 0" />
+        <origin xyz="0.00307707 0.0182354 0.0149814" rpy="5.55112e-17 -2.77556e-17 -1.38778e-17" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_33" />
         <child link="mgn12h_ball_40" />
     </joint>
     <joint name="group_2__1__fastened_joint_2" type="fixed">
-        <origin xyz="-0.000615414 -0.00364708 -0.00299627" rpy="0 -0 0" />
+        <origin xyz="-0.000615414 -0.00364708 -0.00299627" rpy="5.55112e-17 -2.77556e-17 -1.38778e-17" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_35" />
         <child link="mgn12h_ball_18" />
@@ -4741,7 +4733,7 @@
         <child link="mgn12h_ball_24" />
     </joint>
     <joint name="group_2__1__fastened_joint_21" type="fixed">
-        <origin xyz="-0.00104986 0.00134519 -0.00444363" rpy="-1.38778e-17 -1.38778e-17 2.77556e-17" />
+        <origin xyz="-0.00104986 0.00134519 -0.00444363" rpy="1.38778e-17 2.77556e-17 -5.55112e-17" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_56" />
         <child link="mgn12h_ball_44" />
@@ -4753,49 +4745,49 @@
         <child link="mgn12h_ball_12" />
     </joint>
     <joint name="group_2__1__fastened_joint_23" type="fixed">
-        <origin xyz="0.00215395 0.0127648 0.010487" rpy="0 -0 0" />
+        <origin xyz="0.00215395 0.0127648 0.010487" rpy="5.55112e-17 -2.77556e-17 -1.38778e-17" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_18" />
         <child link="mgn12h_ball_62" />
     </joint>
     <joint name="group_2__1__fastened_joint_24" type="fixed">
-        <origin xyz="-1.05471e-14 -0.0003 -0.0389" rpy="3.14159 -3.3587e-13 3.14159" />
+        <origin xyz="-1.21014e-14 -0.0003 -0.0389" rpy="3.14159 -3.35795e-13 3.14159" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_endcap_3" />
         <child link="mgn12h_seal_2" />
     </joint>
     <joint name="group_2__1__fastened_joint_25" type="fixed">
-        <origin xyz="0.0419007 0.0154 -4.45006e-09" rpy="1.70516e-15 -0.00596662 -3.14159" />
+        <origin xyz="0.0419007 0.0154 -4.45006e-09" rpy="1.51244e-15 -0.00596662 -3.14159" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_cage_2" />
         <child link="mgn12h_cage_3" />
     </joint>
     <joint name="group_2__1__fastened_joint_26" type="fixed">
-        <origin xyz="0.000524931 -0.000672596 0.00222182" rpy="-1.38778e-17 -1.38778e-17 2.77556e-17" />
+        <origin xyz="0.000524931 -0.000672596 0.00222182" rpy="1.38778e-17 2.77556e-17 -5.55112e-17" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_52" />
         <child link="mgn12h_ball_26" />
     </joint>
     <joint name="group_2__1__fastened_joint_27" type="fixed">
-        <origin xyz="-0.00184624 -0.0109413 -0.00898882" rpy="0 -0 0" />
+        <origin xyz="-0.00184624 -0.0109413 -0.00898882" rpy="5.55112e-17 -2.77556e-17 -1.38778e-17" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_41" />
         <child link="mgn12h_ball_38" />
     </joint>
     <joint name="group_2__1__fastened_joint_28" type="fixed">
-        <origin xyz="-0.00246166 -0.0145883 -0.0119851" rpy="0 -0 0" />
+        <origin xyz="-0.00246166 -0.0145883 -0.0119851" rpy="5.55112e-17 -2.77556e-17 -1.38778e-17" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_59" />
         <child link="mgn12h_ball_11" />
     </joint>
     <joint name="group_2__1__fastened_joint_29" type="fixed">
-        <origin xyz="-0.0046156 -0.0273531 -0.022472" rpy="0 -0 0" />
+        <origin xyz="-0.0046156 -0.0273531 -0.022472" rpy="5.55112e-17 -2.77556e-17 -1.38778e-17" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_49" />
         <child link="mgn12h_ball_58" />
     </joint>
     <joint name="group_2__1__fastened_joint_3" type="fixed">
-        <origin xyz="0.0017 -0.00236494 0.00475" rpy="-1.64675e-11 1.56483 1.5708" />
+        <origin xyz="0.0017 -0.00236494 0.00475" rpy="-1.63931e-11 1.56483 1.5708" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_body" />
         <child link="mgn12h_cage_2" />
@@ -4849,7 +4841,7 @@
         <child link="mgn12h_ball_56" />
     </joint>
     <joint name="group_2__1__fastened_joint_38" type="fixed">
-        <origin xyz="0.00209972 -0.00269038 0.00888726" rpy="-1.38778e-17 -1.38778e-17 2.77556e-17" />
+        <origin xyz="0.00209972 -0.00269038 0.00888726" rpy="1.38778e-17 2.77556e-17 -5.55112e-17" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_24" />
         <child link="mgn12h_ball_14" />
@@ -4873,13 +4865,13 @@
         <child link="mgn12h_ball" />
     </joint>
     <joint name="group_2__1__fastened_joint_6" type="fixed">
-        <origin xyz="-0.00157479 0.00201779 -0.00666545" rpy="-1.38778e-17 -1.38778e-17 2.77556e-17" />
+        <origin xyz="-0.00157479 0.00201779 -0.00666545" rpy="1.38778e-17 2.77556e-17 -5.55112e-17" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_7" />
         <child link="mgn12h_ball_15" />
     </joint>
     <joint name="group_2__1__fastened_joint_7" type="fixed">
-        <origin xyz="-0.00184624 -0.0109413 -0.00898882" rpy="0 -0 0" />
+        <origin xyz="-0.00184624 -0.0109413 -0.00898882" rpy="5.55112e-17 -2.77556e-17 -1.38778e-17" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_62" />
         <child link="mgn12h_ball_67" />
@@ -4891,7 +4883,7 @@
         <child link="mgn12h_ball_43" />
     </joint>
     <joint name="group_2__1__fastened_joint_9" type="fixed">
-        <origin xyz="0.00153853 0.00911771 0.00749068" rpy="0 -0 0" />
+        <origin xyz="0.00153853 0.00911771 0.00749068" rpy="5.55112e-17 -2.77556e-17 -1.38778e-17" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_38" />
         <child link="mgn12h_ball_35" />
@@ -4903,7 +4895,7 @@
         <child link="mgn12h_ball_8" />
     </joint>
     <joint name="group_2_fastened_joint_1" type="fixed">
-        <origin xyz="-0.00157479 0.00201779 -0.00666545" rpy="0 -0 0" />
+        <origin xyz="-0.00157479 0.00201779 -0.00666545" rpy="-1.38778e-17 -1.92593e-34 -2.77556e-17" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_66" />
         <child link="mgn12h_ball_39" />
@@ -4921,7 +4913,7 @@
         <child link="mgn12h_ball_32" />
     </joint>
     <joint name="group_2_fastened_joint_12" type="fixed">
-        <origin xyz="-0.00104986 0.00134519 -0.00444363" rpy="0 -0 0" />
+        <origin xyz="-0.00104986 0.00134519 -0.00444363" rpy="-1.38778e-17 -1.92593e-34 -2.77556e-17" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_16" />
         <child link="mgn12h_ball_13" />
@@ -4933,19 +4925,19 @@
         <child link="mgn12h_ball_25" />
     </joint>
     <joint name="group_2_fastened_joint_14" type="fixed">
-        <origin xyz="-0.00246166 -0.0145883 -0.0119851" rpy="-5.55112e-17 -2.77556e-17 2.77556e-17" />
+        <origin xyz="-0.00246166 -0.0145883 -0.0119851" rpy="-2.77556e-17 1.38778e-17 -1.92593e-34" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_36" />
         <child link="mgn12h_ball_30" />
     </joint>
     <joint name="group_2_fastened_joint_15" type="fixed">
-        <origin xyz="0.00153853 0.00911771 0.00749068" rpy="-5.55112e-17 -2.77556e-17 2.77556e-17" />
+        <origin xyz="0.00153853 0.00911771 0.00749068" rpy="-2.77556e-17 1.38778e-17 -1.92593e-34" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_21" />
         <child link="mgn12h_ball_53" />
     </joint>
     <joint name="group_2_fastened_joint_16" type="fixed">
-        <origin xyz="-0.00184624 -0.0109413 -0.00898882" rpy="-5.55112e-17 -2.77556e-17 2.77556e-17" />
+        <origin xyz="-0.00184624 -0.0109413 -0.00898882" rpy="-2.77556e-17 1.38778e-17 -1.92593e-34" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_54" />
         <child link="mgn12h_ball_47" />
@@ -4963,31 +4955,31 @@
         <child link="mgn12h_ball_57" />
     </joint>
     <joint name="group_2_fastened_joint_19" type="fixed">
-        <origin xyz="0.00153853 0.00911771 0.00749068" rpy="-5.55112e-17 -2.77556e-17 2.77556e-17" />
+        <origin xyz="0.00153853 0.00911771 0.00749068" rpy="-2.77556e-17 1.38778e-17 -1.92593e-34" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_17" />
         <child link="mgn12h_ball_22" />
     </joint>
     <joint name="group_2_fastened_joint_2" type="fixed">
-        <origin xyz="0.000524931 -0.000672596 0.00222182" rpy="0 -0 0" />
+        <origin xyz="0.000524931 -0.000672596 0.00222182" rpy="-1.38778e-17 -1.92593e-34 -2.77556e-17" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_20" />
         <child link="mgn12h_ball_51" />
     </joint>
     <joint name="group_2_fastened_joint_20" type="fixed">
-        <origin xyz="-0.00184624 -0.0109413 -0.00898882" rpy="-5.55112e-17 -2.77556e-17 2.77556e-17" />
+        <origin xyz="-0.00184624 -0.0109413 -0.00898882" rpy="-2.77556e-17 1.38778e-17 -1.92593e-34" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_22" />
         <child link="mgn12h_ball_21" />
     </joint>
     <joint name="group_2_fastened_joint_21" type="fixed">
-        <origin xyz="0.00209972 -0.00269038 0.00888726" rpy="0 -0 0" />
+        <origin xyz="0.00209972 -0.00269038 0.00888726" rpy="-1.38778e-17 -1.92593e-34 -2.77556e-17" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_9" />
         <child link="mgn12h_ball_42" />
     </joint>
     <joint name="group_2_fastened_joint_22" type="fixed">
-        <origin xyz="0.0017 -0.00236494 0.02095" rpy="1.07923e-11 1.56483 1.5708" />
+        <origin xyz="0.0017 -0.00236494 0.02095" rpy="1.0876e-11 1.56483 1.5708" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_body_1" />
         <child link="mgn12h_cage" />
@@ -4999,7 +4991,7 @@
         <child link="mgn12h_ball_27" />
     </joint>
     <joint name="group_2_fastened_joint_24" type="fixed">
-        <origin xyz="0.000923121 0.00547063 0.00449441" rpy="-5.55112e-17 -2.77556e-17 2.77556e-17" />
+        <origin xyz="0.000923121 0.00547063 0.00449441" rpy="-2.77556e-17 1.38778e-17 -1.92593e-34" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_30" />
         <child link="mgn12h_ball_31" />
@@ -5011,7 +5003,7 @@
         <child link="mgn12h_ball_45" />
     </joint>
     <joint name="group_2_fastened_joint_26" type="fixed">
-        <origin xyz="1.63203e-14 -2.58127e-15 0.0374" rpy="1.9082e-17 6.62038e-35 -6.93889e-18" />
+        <origin xyz="1.7597e-14 -6.88338e-15 0.0374" rpy="-5.42101e-20 -1.88079e-37 -6.93889e-18" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_endcap_2" />
         <child link="mgn12h_endcap_1" />
@@ -5029,7 +5021,7 @@
         <child link="mgn12h_ball_29" />
     </joint>
     <joint name="group_2_fastened_joint_29" type="fixed">
-        <origin xyz="0.00104986 -0.00134519 0.00444363" rpy="0 -0 0" />
+        <origin xyz="0.00104986 -0.00134519 0.00444363" rpy="-1.38778e-17 -1.92593e-34 -2.77556e-17" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_8" />
         <child link="mgn12h_ball_66" />
@@ -5047,13 +5039,13 @@
         <child link="mgn12h_ball_23" />
     </joint>
     <joint name="group_2_fastened_joint_31" type="fixed">
-        <origin xyz="-0.000615414 -0.00364708 -0.00299627" rpy="-5.55112e-17 -2.77556e-17 2.77556e-17" />
+        <origin xyz="-0.000615414 -0.00364708 -0.00299627" rpy="-2.77556e-17 1.38778e-17 -1.92593e-34" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_53" />
         <child link="mgn12h_ball_28" />
     </joint>
     <joint name="group_2_fastened_joint_32" type="fixed">
-        <origin xyz="-0.0046156 -0.0273531 -0.022472" rpy="-5.55112e-17 -2.77556e-17 2.77556e-17" />
+        <origin xyz="-0.0046156 -0.0273531 -0.022472" rpy="-2.77556e-17 1.38778e-17 -1.92593e-34" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_45" />
         <child link="mgn12h_ball_37" />
@@ -5077,19 +5069,19 @@
         <child link="mgn12h_ball_3" />
     </joint>
     <joint name="group_2_fastened_joint_36" type="fixed">
-        <origin xyz="0.00307707 0.0182354 0.0149814" rpy="-5.55112e-17 -2.77556e-17 2.77556e-17" />
+        <origin xyz="0.00307707 0.0182354 0.0149814" rpy="-2.77556e-17 1.38778e-17 -1.92593e-34" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_32" />
         <child link="mgn12h_ball_65" />
     </joint>
     <joint name="group_2_fastened_joint_37" type="fixed">
-        <origin xyz="0.0419007 0.0154 -4.45006e-09" rpy="1.68946e-15 -0.00596662 -3.14159" />
+        <origin xyz="0.0419007 0.0154 -4.45006e-09" rpy="2.22491e-15 -0.00596662 -3.14159" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_cage" />
         <child link="mgn12h_cage_1" />
     </joint>
     <joint name="group_2_fastened_joint_38" type="fixed">
-        <origin xyz="-0.00262466 0.00336298 -0.0111091" rpy="0 -0 0" />
+        <origin xyz="-0.00262466 0.00336298 -0.0111091" rpy="-1.38778e-17 -1.92593e-34 -2.77556e-17" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_29" />
         <child link="mgn12h_ball_34" />
@@ -5107,19 +5099,19 @@
         <child link="mgn12h_ball_63" />
     </joint>
     <joint name="group_2_fastened_joint_5" type="fixed">
-        <origin xyz="0.00215395 0.0127648 0.010487" rpy="-5.55112e-17 -2.77556e-17 2.77556e-17" />
+        <origin xyz="0.00215395 0.0127648 0.010487" rpy="-2.77556e-17 1.38778e-17 -1.92593e-34" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_ball_28" />
         <child link="mgn12h_ball_54" />
     </joint>
     <joint name="group_2_fastened_joint_6" type="fixed">
-        <origin xyz="-9.21485e-15 -0.0003 -0.0389" rpy="-3.14159 -1.20723e-13 -3.14159" />
+        <origin xyz="-9.9365e-15 -0.0003 -0.0389" rpy="-3.14159 -1.20729e-13 -3.14159" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_endcap_1" />
         <child link="mgn12h_seal_1" />
     </joint>
     <joint name="group_2_fastened_joint_7" type="fixed">
-        <origin xyz="-1.58762e-14 0.0003 -0.0439" rpy="-1.40513e-16 2.77556e-17 -1.73472e-16" />
+        <origin xyz="-1.80411e-14 0.0003 -0.0439" rpy="-8.17488e-17 2.41994e-16 -1.38778e-16" />
         <axis xyz="0 0 1" />
         <parent link="mgn12h_seal" />
         <child link="mgn12h_endcap_2" />
@@ -5137,7 +5129,7 @@
         <child link="mgn12h_ball_16" />
     </joint>
     <joint name="planar_1" type="prismatic">
-        <origin xyz="-0.1 2.22045e-16 0.0242655" rpy="1.5708 -2.42584e-14 -1.5708" />
+        <origin xyz="-0.1 -3.94129e-15 0.0242655" rpy="1.5708 -2.79221e-14 -1.5708" />
         <axis xyz="1 0 0" />
         <parent link="part_1_14" />
         <child link="planar_1_1" />
@@ -5158,7 +5150,7 @@
         <limit effort="1" velocity="1" lower="0" upper="0" />
     </joint>
     <joint name="planar_2" type="prismatic">
-        <origin xyz="-5.55112e-17 -3.33067e-16 8.32667e-17" rpy="-4.09395e-16 3.24393e-16 -6.80012e-16" />
+        <origin xyz="0 5.55112e-17 -2.22045e-16" rpy="-1.31145e-15 -1.6791e-15 2.10769e-16" />
         <axis xyz="-1 -0 -0" />
         <parent link="part_1_14" />
         <child link="planar_2_1" />
@@ -5179,7 +5171,7 @@
         <limit effort="1" velocity="1" lower="0" upper="0" />
     </joint>
     <joint name="planar_3" type="prismatic">
-        <origin xyz="0.006 0.00359095 0.0839049" rpy="-1.56125e-16 1.4988e-15 -2.77556e-17" />
+        <origin xyz="0.006 0.00359095 0.0713145" rpy="-1.89258e-15 -1.73472e-18 6.21031e-16" />
         <axis xyz="0 1 0" />
         <parent link="mgnr12r100hm" />
         <child link="planar_3_1" />
@@ -5190,7 +5182,7 @@
         <axis xyz="0 0 -1" />
         <parent link="planar_3_1" />
         <child link="planar_3" />
-        <limit effort="1" velocity="1" lower="-0.0320951" upper="0.0519049" />
+        <limit effort="1" velocity="1" lower="-0.0446855" upper="0.0393145" />
     </joint>
     <joint name="planar_3_2" type="revolute">
         <origin xyz="0 0 0" rpy="0 -0 0" />
@@ -5200,7 +5192,7 @@
         <limit effort="1" velocity="1" lower="0" upper="0" />
     </joint>
     <joint name="planar_4" type="prismatic">
-        <origin xyz="0.1 1.11022e-16 0.0242655" rpy="1.5708 -3.33067e-16 -1.5708" />
+        <origin xyz="0.1 -4.996e-16 0.0242655" rpy="1.5708 4.44089e-16 -1.5708" />
         <axis xyz="1 0 0" />
         <parent link="part_1_14" />
         <child link="planar_4_1" />
@@ -5221,7 +5213,7 @@
         <limit effort="1" velocity="1" lower="0" upper="0" />
     </joint>
     <joint name="planar_5" type="prismatic">
-        <origin xyz="0.006 0.00359095 -0.0282276" rpy="8.04912e-16 -4.71845e-16 -6.245e-16" />
+        <origin xyz="0.006 0.00359095 -0.0673412" rpy="-4.13146e-15 1.37303e-15 -2.15106e-16" />
         <axis xyz="0 1 0" />
         <parent link="mgnr12r100hm_1" />
         <child link="planar_5_1" />
@@ -5232,7 +5224,7 @@
         <axis xyz="0 0 -1" />
         <parent link="planar_5_1" />
         <child link="planar_5" />
-        <limit effort="1" velocity="1" lower="-0.0122276" upper="0.0717724" />
+        <limit effort="1" velocity="1" lower="-0.0513412" upper="0.0326588" />
     </joint>
     <joint name="planar_5_2" type="revolute">
         <origin xyz="0 0 0" rpy="0 -0 0" />
@@ -5242,7 +5234,7 @@
         <limit effort="1" velocity="1" lower="0" upper="0" />
     </joint>
     <joint name="planar_6" type="prismatic">
-        <origin xyz="-0.006 0.0101751 -0.0112" rpy="-3.14159 7.18002e-15 1.5708" />
+        <origin xyz="-0.006 0.0101751 -0.0112" rpy="3.14159 -4.70213e-15 1.5708" />
         <axis xyz="0 1 0" />
         <parent link="mgn12h_body" />
         <child link="planar_6_1" />
@@ -5263,7 +5255,7 @@
         <limit effort="1" velocity="1" lower="0" upper="0" />
     </joint>
     <joint name="planar_7" type="prismatic">
-        <origin xyz="-0.006 0.00517506 -0.005" rpy="2.51708e-15 -3.17454e-16 -1.5708" />
+        <origin xyz="-0.006 0.00517506 -0.005" rpy="-5.62864e-16 -3.82344e-16 -1.5708" />
         <axis xyz="-0 -1 -0" />
         <parent link="mgn12h_body_1" />
         <child link="planar_7_1" />
@@ -5284,86 +5276,73 @@
         <limit effort="1" velocity="1" lower="0" upper="0" />
     </joint>
     <joint name="rev_j0" type="continuous">
-        <origin xyz="1.97215e-31 2.77556e-17 -1.38778e-17" rpy="-3.14159 7.52647e-17 -4.42354e-15" />
+        <origin xyz="-1.97215e-31 1.38778e-17 -1.38778e-17" rpy="3.14159 -9.34657e-17 3.14159" />
         <axis xyz="0 0 -1" />
         <parent link="part_1_3" />
         <child link="1mt_054_006" />
     </joint>
     <joint name="rev_j1" type="continuous">
-        <origin xyz="-0.0441673 0.0175 0.0255" rpy="-1.5708 -2.27649e-16 8.36581e-15" />
+        <origin xyz="-0.0441673 0.0175 0.0255" rpy="-1.5708 -9.31234e-16 -4.74052e-16" />
         <axis xyz="0 0 -1" />
         <parent link="1mt_055_026_rh_25_100_e_b_一体化谐波减速模组_双编_抱闸_ecat_" />
         <child link="part_1_9" />
     </joint>
     <joint name="rev_j2" type="continuous">
-        <origin xyz="1.11022e-16 -1.38778e-16 -0.011" rpy="0 1.5708 -2.15974" />
-        <axis xyz="-1 -0 -0" />
+        <origin xyz="1.11022e-16 0 -0.011" rpy="0 1.5708 1.82671" />
+        <axis xyz="1 -0 -0" />
         <parent link="part_1_6" />
         <child link="1mt_055_025_rh_20_100_e_b_一体化谐波减速模组_双编_抱闸_ecat_" />
     </joint>
     <joint name="rev_j3" type="continuous">
-        <origin xyz="-0.058545 0 -0.05649" rpy="-1.5708 0.19635 1.5708" />
+        <origin xyz="-0.058545 8.32667e-17 -0.05649" rpy="-1.5708 0.19635 1.5708" />
         <axis xyz="1.93367e-20 2.27514e-20 -1" />
         <parent link="part_1_4" />
         <child link="x6_p20_60" />
     </joint>
     <joint name="rev_j4" type="continuous">
-        <origin xyz="-0.0204915 0.044 -0.0271311" rpy="-2.21767 2.77556e-16 -1.5708" />
+        <origin xyz="-0.0204915 0.044 -0.0271311" rpy="-2.21767 6.10623e-15 -1.5708" />
         <axis xyz="2.26473e-17 1 -8.14831e-17" />
         <parent link="part_1" />
         <child link="x4_p36_36_3" />
     </joint>
-    <joint name="rev_j5" type="prismatic">
-        <origin xyz="-0.00932506 0.049 0.0210248" rpy="1.98191 -0.0746492 -1.40137" />
-        <axis xyz="-5.75112e-16 -1 -5.33934e-16" />
-        <parent link="part_1__print_" />
-        <child link="rev_j5" />
-        <limit effort="1" velocity="1" lower="-10000" upper="10000" />
-    </joint>
-    <joint name="rev_j5_1" type="continuous">
-        <origin xyz="0 0 0" rpy="0 -0 0" />
-        <axis xyz="-5.75112e-16 -1 -5.33934e-16" />
-        <parent link="rev_j5" />
-        <child link="x4_p36_36" />
+    <joint name="rev_j5" type="continuous">
+        <origin xyz="3.88578e-16 0.005 -1.56125e-17" rpy="0 -1.5708 -1.5708" />
+        <axis xyz="-0 -0 -1" />
+        <parent link="x4_p36_36" />
+        <child link="part_1_14" />
     </joint>
     <joint name="revolute_1" type="continuous">
-        <origin xyz="1.11022e-16 -2.22045e-16 0.0018" rpy="-6.46614e-17 4.46829e-16 -3.14159" />
-        <axis xyz="-1.93367e-20 -2.27514e-20 1" />
-        <parent link="x6_p20_60" />
-        <child link="x6_p20_60_1" />
+        <origin xyz="0.0207846 -0.002 0.012" rpy="-1.18821e-14 -0.510099 -6.09855e-15" />
+        <axis xyz="5.75112e-16 1 5.33934e-16" />
+        <parent link="x4_p36_36_1" />
+        <child link="x4_p36_36" />
     </joint>
     <joint name="revolute_13" type="continuous">
-        <origin xyz="-2.77556e-17 0.005 0" rpy="0 1.5708 -3.40006e-16" />
+        <origin xyz="-1.11022e-16 0.005 0" rpy="0 1.5708 -3.79211e-15" />
         <axis xyz="0 -1 0" />
         <parent link="x4_p36_36_2" />
         <child link="part_1__print_" />
     </joint>
-    <joint name="revolute_16" type="continuous">
-        <origin xyz="0.0108909 0.061 0.0267093" rpy="1.93753 -0.204134 -1.08518" />
-        <axis xyz="2.26473e-17 1 -8.14831e-17" />
-        <parent link="part_1__print_" />
-        <child link="x4_p36_36_1" />
-    </joint>
     <joint name="revolute_1_1" type="continuous">
-        <origin xyz="-1.73472e-18 -0.002 -2.77556e-17" rpy="-1.50987e-15 -1.04945 4.63855e-16" />
+        <origin xyz="-3.64292e-17 0 0.0018" rpy="-1.9571e-15 -6.15671e-16 -3.14159" />
+        <axis xyz="-1.93367e-20 -2.27514e-20 1" />
+        <parent link="x6_p20_60" />
+        <child link="x6_p20_60_1" />
+    </joint>
+    <joint name="revolute_1_2" type="continuous">
+        <origin xyz="-3.46945e-18 -0.002 0" rpy="3.14159 1.15308 -3.14159" />
         <axis xyz="5.75112e-16 1 5.33934e-16" />
         <parent link="x4_p36_36_3" />
         <child link="x4_p36_36_2" />
     </joint>
-    <joint name="revolute_1_loop_closure" type="continuous">
-        <origin xyz="-1.11022e-16 -0.002 0.024" rpy="5.57311e-16 -0.338596 3.1181e-16" />
-        <axis xyz="5.75112e-16 1 5.33934e-16" />
-        <parent link="x4_p36_36_1" />
-        <child link="x4_p36_36__2__loop_closure" />
-    </joint>
     <joint name="revolute_3" type="continuous">
-        <origin xyz="-2.97384e-19 0 -0.007" rpy="-5.2958e-17 -3.86085e-16 -1.60457" />
+        <origin xyz="1.18399e-19 0 -0.007" rpy="-5.8172e-16 -1.73079e-16 1.57208" />
         <axis xyz="-1.54074e-33 -1.22465e-16 1" />
         <parent link="1mt_054_006" />
         <child link="1mt_054_006_1" />
     </joint>
     <joint name="revolute_9" type="continuous">
-        <origin xyz="2.22045e-16 0 -0.0048" rpy="-1.5708 9.4369e-16 -0.956546" />
+        <origin xyz="-1.42247e-16 6.66134e-16 -0.0048" rpy="-1.5708 1.05471e-15 1.97304" />
         <axis xyz="0 -1 0" />
         <parent link="x6_p20_60_1" />
         <child link="part_1" />
