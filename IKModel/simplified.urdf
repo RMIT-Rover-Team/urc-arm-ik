@@ -1,10 +1,8 @@
 <?xml version="1.0"?>
-<robot name="cylinder_arm">
+<robot name="simple_arm">
 
-  <!-- ========================= -->
-  <!-- BASE LINK -->
-  <!-- ========================= -->
-  <link name="J0">
+  <!-- BASE Mount (Static) -->
+  <link name="BASE">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
@@ -13,21 +11,17 @@
     </visual>
   </link>
 
-  <!-- ========================= -->
   <!-- JOINT 0: YAW -->
-  <!-- ========================= -->
-  <joint name="J0_to_J1" type="revolute">
-    <parent link="J0"/>
-    <child link="J1"/>
+  <joint name="rev_j0" type="revolute">
+    <parent link="BASE"/>
+    <child link="LOWER"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <axis xyz="0 0 1"/>
     <limit lower="-3.14" upper="3.14" effort="10" velocity="5"/>
   </joint>
 
-  <!-- ========================= -->
   <!-- LINK 1 -->
-  <!-- ========================= -->
-  <link name="J1">
+  <link name="LOWER">
     <visual>
       <origin xyz="0.061 0 0" rpy="0 1.5708 0"/>
       <geometry>
@@ -36,21 +30,17 @@
     </visual>
   </link>
 
-  <!-- ========================= -->
   <!-- JOINT 1: PITCH -->
-  <!-- ========================= -->
-  <joint name="J1_to_J2" type="revolute">
-    <parent link="J1"/>
-    <child link="J2"/>
+  <joint name="rev_j1" type="revolute">
+    <parent link="LOWER"/>
+    <child link="UPPER"/>
     <origin xyz="0.122 0 0" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
     <limit lower="-3.14" upper="3.14" effort="10" velocity="5"/>
   </joint>
 
-  <!-- ========================= -->
   <!-- LINK 2 -->
-  <!-- ========================= -->
-  <link name="J2">
+  <link name="UPPER">
     <visual>
       <origin xyz="0.251 0 0" rpy="0 1.5708 0"/>
       <geometry>
@@ -59,21 +49,17 @@
     </visual>
   </link>
 
-  <!-- ========================= -->
   <!-- JOINT 2: PITCH -->
-  <!-- ========================= -->
-  <joint name="J2_to_J3" type="revolute">
-    <parent link="J2"/>
-    <child link="J3"/>
+  <joint name="rev_j2" type="revolute">
+    <parent link="UPPER"/>
+    <child link="WR1"/>
     <origin xyz="0.502 0 0" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
     <limit lower="-3.14" upper="3.14" effort="10" velocity="5"/>
   </joint>
 
-  <!-- ========================= -->
   <!-- LINK 3 -->
-  <!-- ========================= -->
-  <link name="J3">
+  <link name="WR1">
     <visual>
       <origin xyz="0.2415 0 0" rpy="0 1.5708 0"/>
       <geometry>
@@ -82,21 +68,17 @@
     </visual>
   </link>
 
-  <!-- ========================= -->
   <!-- JOINT 3: PITCH -->
-  <!-- ========================= -->
-  <joint name="J3_to_J4" type="revolute">
-    <parent link="J3"/>
-    <child link="J4"/>
+  <joint name="rev_j3" type="revolute">
+    <parent link="WR1"/>
+    <child link="WR2"/>
     <origin xyz="0.483 0 0" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
     <limit lower="-3.14" upper="3.14" effort="10" velocity="5"/>
   </joint>
 
-  <!-- ========================= -->
   <!-- LINK 4 -->
-  <!-- ========================= -->
-  <link name="J4">
+  <link name="WR2">
     <visual>
       <origin xyz="0.0295 0 0" rpy="0 1.5708 0"/>
       <geometry>
@@ -105,21 +87,17 @@
     </visual>
   </link>
 
-  <!-- ========================= -->
   <!-- JOINT 4: YAW -->
-  <!-- ========================= -->
-  <joint name="J4_to_J5" type="revolute">
-    <parent link="J4"/>
-    <child link="J5"/>
+  <joint name="rev_j4" type="revolute">
+    <parent link="WR2"/>
+    <child link="WR3"/>
     <origin xyz="0.059 0 0" rpy="0 0 0"/>
     <axis xyz="0 0 1"/>
     <limit lower="-3.14" upper="3.14" effort="10" velocity="5"/>
   </joint>
 
-  <!-- ========================= -->
   <!-- LINK 5 -->
-  <!-- ========================= -->
-  <link name="J5">
+  <link name="WR3">
     <visual>
       <origin xyz="0.0295 0 0" rpy="0 1.5708 0"/>
       <geometry>
@@ -128,21 +106,17 @@
     </visual>
   </link>
 
-  <!-- ========================= -->
   <!-- JOINT 5: ROLL -->
-  <!-- ========================= -->
-  <joint name="J5_roll" type="revolute">
-    <parent link="J5"/>
-    <child link="J6"/>
+  <joint name="rev_j5" type="revolute">
+    <parent link="WR3"/>
+    <child link="WR4"/>
     <origin xyz="0.059 0 0" rpy="0 0 0"/>
     <axis xyz="1 0 0"/>
     <limit lower="-3.14" upper="3.14" effort="10" velocity="5"/>
   </joint>
 
-  <!-- ========================= -->
   <!-- END EFFECTOR -->
-  <!-- ========================= -->
-  <link name="J6">
+  <link name="WR4">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
