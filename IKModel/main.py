@@ -66,7 +66,7 @@ class motionplanner:
     #IKPY needs a special format so we need to convert from urdf
     def convertURDFtoChain(self):
         p.connect(p.DIRECT)
-        robot = p.loadURDF("myactuator_arm_assembly/urdf/myactuator_arm_assembly.urdf", useFixedBase=True)
+        robot = p.loadURDF("simplified.urdf", useFixedBase=True)
 
         links = []
 
