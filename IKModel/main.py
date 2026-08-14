@@ -10,18 +10,34 @@ import time
 import pybullet as p
 import pybullet_data
 
+ArmJoints = [
+    'rev_j0',
+    'rev_j1',
+    'rev_j2',
+    'rev_j3',
+    'rev_j4',
+    'rev_j5'
+]
+
 class motionplanner:
     def __init__(self):
         print("Loading URDF")
         self.chain = self.convertURDFtoChain()
+        self.joint_index = {link.name: i for i, link in enumerate(self.chain.links)}
         print("URDF Loaded and converted to chain")
 
 
     # Cartesian X, Y, Z for the arm to home to
     def translatePosToAngles(self,x,y,z) -> list[float]:
         angles = self.chain.inverse_kinematics([x,y,z])
-        print(angles)
-        return angles
+        oangles = []
+        for name in ArmJoints:
+            oangles.append(
+                angles[self.joint_index[name]]
+                )
+
+        print(oangles)
+        return oangles
 
     # Cartesian X Y Z with orientation too as roll pitch yaw
     def translatePosOrientToAngles(self, x, y, z, rl, pt, yw):
@@ -37,14 +53,20 @@ class motionplanner:
             orientation_mode="all"
         )
 
-        print(angles)
-        return angles
+        oangles = []
+        for name in ArmJoints:
+            oangles.append(
+                angles[self.joint_index[name]]
+                )
+
+        print(oangles)
+        return oangles
 
 
     #IKPY needs a special format so we need to convert from urdf
     def convertURDFtoChain(self):
         p.connect(p.DIRECT)
-        robot = p.loadURDF("simplified.urdf", useFixedBase=True)
+        robot = p.loadURDF("myactuator_arm_assembly/urdf/myactuator_arm_assembly.urdf", useFixedBase=True)
 
         links = []
 
@@ -72,6 +94,8 @@ class motionplanner:
                 )
             )
 
+        
+
         return Chain(name="robot_chain", links=links)
 
 
@@ -93,11 +117,11 @@ class IKServer:
                 last = now
 
                 #Compute the angles
-                angles = self.planner.translatePosOrientToAngles(
-                    target.getFloat('endPosition',0), target.getFloat('endPosition',1), target.getFloat('endPosition',2), 
-                    target.getFloat('endOrientation',0), target.getFloat('endOrientation',1), target.getFloat('endOrientation',2)
-                    )
-                #angles = self.planner.translatePosToAngles(target.getFloat('endPosition',0), target.getFloat('endPosition',1), target.getFloat('endPosition',2))
+                #angles = self.planner.translatePosOrientToAngles(
+                #    target.getFloat('endPosition',0), target.getFloat('endPosition',1), target.getFloat('endPosition',2), 
+                #    target.getFloat('endOrientation',0), target.getFloat('endOrientation',1), target.getFloat('endOrientation',2)
+                #    )
+                angles = self.planner.translatePosToAngles(target.getFloat('endPosition',0), target.getFloat('endPosition',1), target.getFloat('endPosition',2))
 
                 outgoing = self.outChannel.getNewMessageObject()
 
