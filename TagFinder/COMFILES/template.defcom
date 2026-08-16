@@ -10,7 +10,7 @@
 # Or if I wanted to use a port number
 #   Name: 1234@localhost
 
-Name: TagFinder@ros-VMware20-1
+Name: TagFinder@localhost
 
 # This is the message format for requests in transactional communications or the boardcast message in multicast
 # Format is a collection of key value pairs in the form of VarName: Type
@@ -25,7 +25,17 @@ Name: TagFinder@ros-VMware20-1
 #   int[30]
 
 RequestFormat {
-
+    frame_count: int
+    num_markers: int
+    marker: int
+    corner_0_x: float
+    corner_0_y: float
+    corner_1_x: float
+    corner_1_y: float
+    corner_2_x: float
+    corner_2_y: float
+    corner_3_x: float
+    corner_3_y: float
 }
 
 
