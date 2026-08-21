@@ -111,7 +111,10 @@ void directControl(LossyCastPublisher* myPub, SimpleController* myControl){
 }
 
 double ikpos[3] = {0};
+const double posScale = 0.01;
 double ikang[3] = {0};
+const double angScale = 5;
+
 const int readOrder[3] = {0, 1, 4};
 void ikControl(LossyCastPublisher* myPub, SimpleController* myControl){
     //New Message for outgoing
@@ -123,7 +126,7 @@ void ikControl(LossyCastPublisher* myPub, SimpleController* myControl){
 
         // Axis are 0, 1, 3, 4
         for (int i = 0; i < 3; i++){
-            ikang[i] += (double)myControl->getAxis(readOrder[i]) / 32768.0;
+            ikang[i] += ((double)myControl->getAxis(readOrder[i]) / 32768.0) * angScale;
         }
         
 
@@ -131,7 +134,7 @@ void ikControl(LossyCastPublisher* myPub, SimpleController* myControl){
     else {
         printf("Position Mode\n");
         for (int i = 0; i < 3; i++){
-            ikpos[i] += (double)myControl->getAxis(readOrder[i]) / 32768.0;
+            ikpos[i] += ((double)myControl->getAxis(readOrder[i]) / 32768.0) * posScale;
         }
     }
 
@@ -178,8 +181,9 @@ int main(int argc, char *argv[]) {
         if (myControl.buttonAvailable(1)){
             //Await unpress
             myControl.getButton(1);
-            while (!myControl.buttonAvailable(1));
-            myControl.getButton(1);
+            //while (myControl.getButton(1));
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+
             IKMode = ~IKMode;
         }
 

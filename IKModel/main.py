@@ -117,11 +117,11 @@ class IKServer:
                 last = now
 
                 #Compute the angles
-                #angles = self.planner.translatePosOrientToAngles(
-                #    target.getFloat('endPosition',0), target.getFloat('endPosition',1), target.getFloat('endPosition',2), 
-                #    target.getFloat('endOrientation',0), target.getFloat('endOrientation',1), target.getFloat('endOrientation',2)
-                #    )
-                angles = self.planner.translatePosToAngles(target.getFloat('endPosition',0), target.getFloat('endPosition',1), target.getFloat('endPosition',2))
+                angles = self.planner.translatePosOrientToAngles(
+                    target.getFloat('endPosition',0), target.getFloat('endPosition',1), target.getFloat('endPosition',2), 
+                    target.getFloat('endOrientation',0), target.getFloat('endOrientation',1), target.getFloat('endOrientation',2)
+                    )
+                #angles = self.planner.translatePosToAngles(target.getFloat('endPosition',0), target.getFloat('endPosition',1), target.getFloat('endPosition',2))
 
                 outgoing = self.outChannel.getNewMessageObject()
 
