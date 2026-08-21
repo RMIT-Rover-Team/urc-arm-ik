@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from DEFCOM import ChannelMulticast
+from DEFCOM import ChannelLossyCast
 import tkinter as tk
 import math
 
@@ -18,7 +18,7 @@ class slider_app:
 
     def __init__(self, n):
         #Start the multicast channel
-        self.channel = ChannelMulticast.MulticastPublisher("COMFILES/ArmControl.defcom")
+        self.channel = ChannelLossyCast.LossyCastPublisher("COMFILES/ArmControl.defcom")
 
 
         #Set up tkinter

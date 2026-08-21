@@ -4,7 +4,7 @@ import pybullet_data
 import threading
 
 # Import your channel type(s)
-from DEFCOM import ChannelMulticast
+from DEFCOM import ChannelLossyCast
 
 #Joint Mappings:
 ArmJoints = {
@@ -40,7 +40,7 @@ def main():
 
 
     # Create the DEFCOM Connection
-    channel = ChannelMulticast.MulticastSubscriber('COMFILES/ArmControl.defcom')
+    channel = ChannelLossyCast.LossyCastSubscriber('COMFILES/ArmControl.defcom')
 
 
 
@@ -52,7 +52,7 @@ def main():
     z_id = p.addUserDebugLine([0,0,0], [0,0,0], [1,0,0], 3)
     def targetSubLoop():
         target = [0,0,0]
-        targetchan = ChannelMulticast.MulticastSubscriber('COMFILES/ArmIKControl.defcom')
+        targetchan = ChannelLossyCast.LossyCastSubscriber('COMFILES/ArmIKControl.defcom')
 
         while True:
             m = targetchan.subscribe()

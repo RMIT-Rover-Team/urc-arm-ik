@@ -3,7 +3,7 @@ import ikpy
 from ikpy.chain import Chain
 from ikpy.link import URDFLink
 #from urdfpy import URDF
-from DEFCOM import ChannelMulticast
+from DEFCOM import ChannelLossyCast
 import numpy as np
 from ikpy.utils import geometry
 import time
@@ -102,8 +102,8 @@ class motionplanner:
 
 class IKServer:
     def __init__(self, planner: motionplanner):
-        self.inChannel = ChannelMulticast.MulticastSubscriber("COMFILES/ArmIKControl.defcom")
-        self.outChannel = ChannelMulticast.MulticastPublisher("COMFILES/ArmControl.defcom")
+        self.inChannel = ChannelLossyCast.LossyCastSubscriber("COMFILES/ArmIKControl.defcom")
+        self.outChannel = ChannelLossyCast.LossyCastPublisher("COMFILES/ArmControl.defcom")
         self.planner = planner
 
     def run(self):
