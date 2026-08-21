@@ -7,6 +7,8 @@ add_subdirectory(external/DEFCOM)
 # Your executable
 add_executable(ArmPhysical
     src/main.cpp
+    src/MyActuatorMotor.cpp
+    src/SocketCanWrapper.cpp
 )
 
 # Link against DEFCOM
@@ -19,6 +21,7 @@ target_link_libraries(ArmPhysical
 target_include_directories(ArmPhysical
     PRIVATE
         external/DEFCOM/include
+        include
 )
 
 # C++ standard

@@ -187,6 +187,54 @@ DEFCOM/fast:
 	$(MAKE) $(MAKESILENT) -f external/DEFCOM/CMakeFiles/DEFCOM.dir/build.make external/DEFCOM/CMakeFiles/DEFCOM.dir/build
 .PHONY : DEFCOM/fast
 
+src/MyActuatorMotor.o: src/MyActuatorMotor.cpp.o
+.PHONY : src/MyActuatorMotor.o
+
+# target to build an object file
+src/MyActuatorMotor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmPhysical.dir/build.make CMakeFiles/ArmPhysical.dir/src/MyActuatorMotor.cpp.o
+.PHONY : src/MyActuatorMotor.cpp.o
+
+src/MyActuatorMotor.i: src/MyActuatorMotor.cpp.i
+.PHONY : src/MyActuatorMotor.i
+
+# target to preprocess a source file
+src/MyActuatorMotor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmPhysical.dir/build.make CMakeFiles/ArmPhysical.dir/src/MyActuatorMotor.cpp.i
+.PHONY : src/MyActuatorMotor.cpp.i
+
+src/MyActuatorMotor.s: src/MyActuatorMotor.cpp.s
+.PHONY : src/MyActuatorMotor.s
+
+# target to generate assembly for a file
+src/MyActuatorMotor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmPhysical.dir/build.make CMakeFiles/ArmPhysical.dir/src/MyActuatorMotor.cpp.s
+.PHONY : src/MyActuatorMotor.cpp.s
+
+src/SocketCanWrapper.o: src/SocketCanWrapper.cpp.o
+.PHONY : src/SocketCanWrapper.o
+
+# target to build an object file
+src/SocketCanWrapper.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmPhysical.dir/build.make CMakeFiles/ArmPhysical.dir/src/SocketCanWrapper.cpp.o
+.PHONY : src/SocketCanWrapper.cpp.o
+
+src/SocketCanWrapper.i: src/SocketCanWrapper.cpp.i
+.PHONY : src/SocketCanWrapper.i
+
+# target to preprocess a source file
+src/SocketCanWrapper.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmPhysical.dir/build.make CMakeFiles/ArmPhysical.dir/src/SocketCanWrapper.cpp.i
+.PHONY : src/SocketCanWrapper.cpp.i
+
+src/SocketCanWrapper.s: src/SocketCanWrapper.cpp.s
+.PHONY : src/SocketCanWrapper.s
+
+# target to generate assembly for a file
+src/SocketCanWrapper.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmPhysical.dir/build.make CMakeFiles/ArmPhysical.dir/src/SocketCanWrapper.cpp.s
+.PHONY : src/SocketCanWrapper.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -225,6 +273,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... ArmPhysical"
 	@echo "... DEFCOM"
+	@echo "... src/MyActuatorMotor.o"
+	@echo "... src/MyActuatorMotor.i"
+	@echo "... src/MyActuatorMotor.s"
+	@echo "... src/SocketCanWrapper.o"
+	@echo "... src/SocketCanWrapper.i"
+	@echo "... src/SocketCanWrapper.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

@@ -11,12 +11,12 @@
 
 //The Default Position
 const double jointDefaults[6] = {
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
+    -38,
+    140,
+    130,
+    -14,
+    14,
+    1.5
 };
 
 //Input Scales

@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   "ArmPhysical"
   "ArmPhysical.pdb"
+  "CMakeFiles/ArmPhysical.dir/src/MyActuatorMotor.cpp.o"
+  "CMakeFiles/ArmPhysical.dir/src/MyActuatorMotor.cpp.o.d"
+  "CMakeFiles/ArmPhysical.dir/src/SocketCanWrapper.cpp.o"
+  "CMakeFiles/ArmPhysical.dir/src/SocketCanWrapper.cpp.o.d"
   "CMakeFiles/ArmPhysical.dir/src/main.cpp.o"
   "CMakeFiles/ArmPhysical.dir/src/main.cpp.o.d"
 )

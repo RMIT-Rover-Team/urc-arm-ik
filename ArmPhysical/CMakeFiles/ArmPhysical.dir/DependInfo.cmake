@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/kaelan/Documents/RMIT/Rover/2026-2027/Projects/urc-arm-ik/ArmPhysical/src/MyActuatorMotor.cpp" "CMakeFiles/ArmPhysical.dir/src/MyActuatorMotor.cpp.o" "gcc" "CMakeFiles/ArmPhysical.dir/src/MyActuatorMotor.cpp.o.d"
+  "/home/kaelan/Documents/RMIT/Rover/2026-2027/Projects/urc-arm-ik/ArmPhysical/src/SocketCanWrapper.cpp" "CMakeFiles/ArmPhysical.dir/src/SocketCanWrapper.cpp.o" "gcc" "CMakeFiles/ArmPhysical.dir/src/SocketCanWrapper.cpp.o.d"
   "/home/kaelan/Documents/RMIT/Rover/2026-2027/Projects/urc-arm-ik/ArmPhysical/src/main.cpp" "CMakeFiles/ArmPhysical.dir/src/main.cpp.o" "gcc" "CMakeFiles/ArmPhysical.dir/src/main.cpp.o.d"
   )
 
