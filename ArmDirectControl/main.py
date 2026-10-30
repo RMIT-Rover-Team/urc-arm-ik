@@ -11,12 +11,20 @@ class slider_app:
             #Send a message
             message = self.channel.getNewMessageObject()
             for i in range(len(values)):
-                 message.setFloat("jointPositions", math.radians(values[i]),i)
+                 message.setFloat("jointSetValues", math.radians(values[i]),i)
+            message.setBytes('movementType',self.mode)
             self.channel.publish(message)
 
+    def setVMode(self):
+        self.mode = b'V'
+    
+    def setPMode(self):
+        self.mode = b'P'
 
 
     def __init__(self, n):
+        self.mode = b'P'
+
         #Start the multicast channel
         self.channel = ChannelLossyCast.LossyCastPublisher("COMFILES/ArmControl.defcom")
 
@@ -26,6 +34,7 @@ class slider_app:
         self.root.title("Joint Angle Controller")
 
         self.sliders = []
+
 
    
 
@@ -47,7 +56,10 @@ class slider_app:
             slider.pack()
             self.sliders.append(slider)
 
-    
+        tk.Button(self.root, text='Velocity mode', command=self.setVMode).pack()
+        tk.Button(self.root, text='Position mode', command=self.setPMode).pack()
+
+        
 
     def run(self):
         self.root.mainloop()

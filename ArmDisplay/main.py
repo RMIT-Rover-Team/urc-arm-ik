@@ -40,7 +40,7 @@ def main():
 
 
     # Create the DEFCOM Connection
-    channel = ChannelLossyCast.LossyCastSubscriber('COMFILES/ArmControl.defcom')
+    channel = ChannelLossyCast.LossyCastSubscriber('COMFILES/ArmState.defcom')
 
 
 
