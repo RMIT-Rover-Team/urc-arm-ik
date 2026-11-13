@@ -28,7 +28,6 @@ class GenericNetWrapper {
         ConnInfo report();
 
         void setPriority(int priority);
-        void setTimeout(int timeoutMS);
 
     protected:
         ConnInfo info;
