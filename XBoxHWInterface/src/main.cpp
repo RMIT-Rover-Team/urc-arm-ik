@@ -1,15 +1,33 @@
 #include <iostream>
 #include <chrono>
 #include <thread>
+#include <cmath>
 
 //Include your channel type(s)
 #include <ChannelLossycast.hpp> 
 #include "SimpleController.h"
 
+// Stick Drift Reject Value
+const double stickDriftReject = 0.05;
+
+double filterDrift(double value){
+    if (fabs(value) < stickDriftReject){
+        return 0;
+    }
+    return value;
+}
+
 int main(int argc, char *argv[]) {
+    if (argc < 2) {
+        printf("Usage: ./XBoxHWInterface ChannelNumber\n");
+        return 0;
+    }
+
+    int channel = std::stoi(argv[1]);
+
     // Set Up Controller
     SimpleController myControl(16,16);
-    printf("Controller Ready\n");
+    printf("Controller Ready Channel %i\n",channel);
     
     //Start the Publisher
     LossyCastPublisher myCast("COMFILES/XBox.defcom");
@@ -23,14 +41,17 @@ int main(int argc, char *argv[]) {
         // Make a new message
         MessageStructure myMessage = myCast.getNewMessageObject();
 
-        // Get each of the important buttons / axis
-        myMessage.setFloat("L_Stick_X", (double)myControl.getAxis(0) / 32768.0);
-        myMessage.setFloat("L_Stick_Y", (double)myControl.getAxis(1) / 32768.0);
-        myMessage.setFloat("R_Stick_X", (double)myControl.getAxis(3) / 32768.0);
-        myMessage.setFloat("R_Stick_Y", (double)myControl.getAxis(4) / 32768.0);
+        // Set Channel
+        myMessage.setInt("Channel_ID",channel);
 
-        myMessage.setFloat("L_Trigger", (double)myControl.getAxis(2) / 32768.0);
-        myMessage.setFloat("R_Trigger", (double)myControl.getAxis(5) / 32768.0);
+        // Get each of the important buttons / axis
+        myMessage.setFloat("L_Stick_X", filterDrift((double)myControl.getAxis(0) / 32768.0));
+        myMessage.setFloat("L_Stick_Y", filterDrift((double)myControl.getAxis(1) / 32768.0));
+        myMessage.setFloat("R_Stick_X", filterDrift((double)myControl.getAxis(3) / 32768.0));
+        myMessage.setFloat("R_Stick_Y", filterDrift((double)myControl.getAxis(4) / 32768.0));
+
+        myMessage.setFloat("L_Trigger", filterDrift((double)myControl.getAxis(2) / 32768.0));
+        myMessage.setFloat("R_Trigger", filterDrift((double)myControl.getAxis(5) / 32768.0));
 
         myMessage.setChar("A_Button", (char)myControl.getButton(0));
         myMessage.setChar("B_Button", (char)myControl.getButton(1));
